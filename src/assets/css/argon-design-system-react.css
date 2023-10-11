@@ -17357,7 +17357,7 @@ textarea[resize="horizontal"] {
   letter-spacing: 0.05px;
 }
 .navbar-brand img {
-  height: 30px;
+  height: 40px;
 }
 
 .navbar-dark .navbar-brand {
@@ -18191,6 +18191,12 @@ textarea[resize="horizontal"] {
 .section-shaped .shape-primary {
   background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
 }
+
+/*Adastra*/
+.section-shaped .shape-aaf {
+  background: linear-gradient(150deg, #063970 15%, #427896 70%, #76a1a7 94);
+}
+
 .section-shaped .shape-primary :nth-child(1) {
   background: #53f;
 }
@@ -18206,6 +18212,31 @@ textarea[resize="horizontal"] {
 .section-shaped .shape-primary :nth-child(5) {
   background: #1fa2ff;
 }
+
+/*Adastra*/
+.section-shaped .shape-aaf :nth-child(1) {
+  background: #063970; /* Variation 1 */
+}
+
+.section-shaped .shape-aaf :nth-child(2) {
+  background: #2a628a; /* Variation 2 */
+}
+
+.section-shaped .shape-aaf :nth-child(3) {
+  background: #3b7095; /* Variation 3 */
+}
+
+.section-shaped .shape-aaf :nth-child(4) {
+  background: #4c7ea0; /* Variation 4 */
+}
+
+.section-shaped .shape-aaf :nth-child(5) {
+  background: #5e8cac; /* Variation 5 */
+}
+
+/*Adastra*/
+
+
 .section-shaped .shape-default {
   background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
 }

@@ -28,13 +28,25 @@ import Landing from "views/examples/Landing.js";
 import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
+import Officers from "views/items/Officers";
+import OfficerList from "views/items/OfficerList";
+import Participants from "views/items/Participants";
+import Mentors from "views/items/Mentors";
+import Celebrations from "views/items/Celebrations";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" exact element={<Index />} />
+      {/* <Route path="/" exact element={<Index />} /> */}
+      <Route path="/" exact element={<Landing />} />
+      <Route path="/participants" exact element={<Participants />} />
+      <Route path="/mentors" exact element={<Mentors />} />
+      <Route path="/celebrations" exact element={<Celebrations />} />
+
+      <Route path="/officers" exact element={<Officers />} />
+      <Route path="/officers/:id" exact element={<OfficerList />} />
       <Route path="/landing-page" exact element={<Landing />} />
       <Route path="/login-page" exact element={<Login />} />
       <Route path="/profile-page" exact element={<Profile />} />

@@ -110,6 +110,31 @@
         }
     }
 
+    //Adastra
+    .shape-aaf {
+        background: linear-gradient(150deg, #063970 15%, #427896 70%, #76a1a7 94);
+      
+        :nth-child(1) {
+          background: #063970; /* Variation 1 */
+        }
+      
+        :nth-child(2) {
+          background: #2a628a; /* Variation 2 */
+        }
+      
+        :nth-child(3) {
+          background: #3b7095; /* Variation 3 */
+        }
+      
+        :nth-child(4) {
+          background: #4c7ea0; /* Variation 4 */
+        }
+      
+        :nth-child(5) {
+          background: #5e8cac; /* Variation 5 */
+        }
+      }
+
     .shape-default {
         background: linear-gradient(150deg, shapes-default-color("step-1-gradient-bg") 15%, shapes-default-color("step-2-gradient-bg") 70%, shapes-default-color("step-3-gradient-bg") 94%);
 
@@ -295,7 +320,9 @@
         &.shape-primary {
             background: linear-gradient(150deg, shapes-primary-color("step-1-gradient-bg") 15%, shapes-primary-color("step-2-gradient-bg") 70%, shapes-primary-color("step-3-gradient-bg") 94%);
         }
-
+        &.shape-aaf {
+            background: linear-gradient(150deg, #063970 15%, #063970 70%, #063970 94%);
+          }
         &.shape-default {
             background: linear-gradient(150deg, shapes-default-color("step-1-gradient-bg") 15%, shapes-default-color("step-2-gradient-bg") 70%, shapes-default-color("step-3-gradient-bg") 94%);
         }
@@ -489,14 +516,14 @@
 
 // Profile cover
 .section-profile-cover {
-    height: 580px;
+    height: 390px;
     background-size: cover;
     background-position: center center;
 }
 
 @include media-breakpoint-down(md) {
     .section-profile-cover {
-        height: 400px;
+        height: 250px;
     }
 }
 
