@@ -23,16 +23,12 @@ import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
-import Index from "views/Index.js";
-import Landing from "views/examples/Landing.js";
-import Login from "views/examples/Login.js";
-import Profile from "views/examples/Profile.js";
-import Register from "views/examples/Register.js";
 import Officers from "views/items/Officers";
 import OfficerList from "views/items/OfficerList";
 import Participants from "views/items/Participants";
 import Mentors from "views/items/Mentors";
 import Celebrations from "views/items/Celebrations";
+import Landing from "views/items/Landing";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -44,13 +40,8 @@ root.render(
       <Route path="/participants" exact element={<Participants />} />
       <Route path="/mentors" exact element={<Mentors />} />
       <Route path="/celebrations" exact element={<Celebrations />} />
-
       <Route path="/officers" exact element={<Officers />} />
       <Route path="/officers/:id" exact element={<OfficerList />} />
-      <Route path="/landing-page" exact element={<Landing />} />
-      <Route path="/login-page" exact element={<Login />} />
-      <Route path="/profile-page" exact element={<Profile />} />
-      <Route path="/register-page" exact element={<Register />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>

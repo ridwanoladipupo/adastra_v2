@@ -69,6 +69,11 @@
   }
 }
 
+.btn-primary{
+  background-color: #063970 !important;
+  border-color: #063970;
+}
+
 .btn-link {
   font-weight: $btn-font-weight;
   box-shadow: none;
@@ -84,7 +89,7 @@
 }
 
 .btn-neutral {
-  color: theme-color("primary");
+  color: #063970;
 }
 
 // Icons

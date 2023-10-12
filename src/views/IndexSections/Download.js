@@ -36,34 +36,34 @@ class Download extends React.Component {
                   <Row className="justify-content-center">
                     <Col lg="2" xs="4">
                       <a
-                        href="https://www.creative-tim.com/product/argon-design-system?ref=adsr-landing-page"
+                        // href="https://www.creative-tim.com/product/argon-design-system?ref=adsr-landing-page"
                         id="tooltip255035741"
                         target="_blank"
                       >
                         <img
                           alt="..."
                           className="img-fluid"
-                          src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg"
+                          src={require("assets/img/brand/graphite.jpg")}
                         />
                       </a>
                       <UncontrolledTooltip delay={0} target="tooltip255035741">
-                        Bootstrap 4 - Most popular front-end component library
+                        Graphite Consulting
                       </UncontrolledTooltip>
                     </Col>
                     <Col lg="2" xs="4">
                       <a
-                        href="https://www.creative-tim.com/product/vue-argon-design-system?ref=adsr-landing-page"
+                        // href="https://www.creative-tim.com/product/vue-argon-design-system?ref=adsr-landing-page"
                         id="tooltip265846671"
                         target="_blank"
                       >
                         <img
                           alt="..."
                           className="img-fluid"
-                          src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
+                          src={require("assets/img/brand/prop.jpg")}
                         />
                       </a>
                       <UncontrolledTooltip delay={0} target="tooltip265846671">
-                        Vue.js - The progressive javascript framework
+                        Proprein Labs Technologies
                       </UncontrolledTooltip>
                     </Col>
                   </Row>

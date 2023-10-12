@@ -23,6 +23,7 @@ import { Button, Card, Container, Row, Col } from "reactstrap";
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
+import { Gallery } from "react-grid-gallery";
 
 const Celebrations = () => {
 
@@ -33,6 +34,68 @@ const Celebrations = () => {
     document.scrollingElement.scrollTop = 0;
     myRef.current.scrollTop = 0;
   }, [])
+
+  const images = [
+    {
+       src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+       width: 550,
+       height: 194,
+    },
+    {
+       src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+       width: 320,
+       height: 212,
+       alt: "Boats (Jeshu John - designerspics.com)",
+    },
+  
+    {
+       src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+       width: 320,
+       height: 212,
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+        width: 320,
+        height: 174,
+        caption: "After Rain (Jeshu John - designerspics.com)",
+     },
+     {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        width: 320,
+        height: 212,
+        alt: "Boats (Jeshu John - designerspics.com)",
+     },
+   
+     {
+        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+        width: 320,
+        height: 212,
+     },
+     {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        width: 320,
+        height: 212,
+        alt: "Boats (Jeshu John - designerspics.com)",
+     },
+   
+     {
+        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+        width: 320,
+        height: 212,
+     },
+     {
+         src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+         width: 320,
+         height: 174,
+         caption: "After Rain (Jeshu John - designerspics.com)",
+      },
+      {
+         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+         width: 320,
+         height: 212,
+         alt: "Boats (Jeshu John - designerspics.com)",
+      },
+ ];
 
     return (
       <>
@@ -80,7 +143,9 @@ const Celebrations = () => {
                   </p>
                 </Col>
               </Row>
-              <Row>
+              <Gallery images={images} />
+
+              {/* <Row>
                 <Col className="mb-5 mb-lg-0" lg="3" md="6">
                   <div className="px-4">
                     <img
@@ -251,7 +316,7 @@ const Celebrations = () => {
                     </div>
                   </div>
                 </Col>
-              </Row>
+              </Row> */}
             </Container>
           </section>
         </main>
