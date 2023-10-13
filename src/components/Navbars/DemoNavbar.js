@@ -33,7 +33,17 @@ import {
   Col,
 } from "reactstrap";
 import ContactModal from "components/Modals/ContactModal";
-import { motion } from 'framer-motion'; 
+import { motion, Variants } from 'framer-motion'; 
+
+
+const itemVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 }
+  },
+  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+};
 
 const DemoNavbar = () => {
   const [collapseClasses, setCollapseClasses] = useState('')
@@ -110,6 +120,8 @@ const DemoNavbar = () => {
     } 
   } 
 
+  
+
     return (
       <>
         <header className="header-global">
@@ -117,6 +129,9 @@ const DemoNavbar = () => {
             className="navbar-main navbar-transparent navbar-light headroom"
             expand="lg"
             id="navbar-main"
+
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
           >
             <Container>
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
@@ -125,9 +140,17 @@ const DemoNavbar = () => {
                   src={require("assets/img/brand/adastra.png")}
                 />
               </NavbarBrand>
-              <button className="navbar-toggler" id="navbar_global">
-                <span className="navbar-toggler-icon" />
-              </button>
+              <motion.button className="navbar-toggler" id="navbar_global"
+                 whileTap={{ scale: 0.97 }}
+              >
+                <motion.span className="navbar-toggler-icon"
+                  variants={{
+                    open: { rotate: 180 },
+                    closed: { rotate: 0 }
+                  }}
+                  transition={{ duration: 0.2 }} 
+                ></motion.span>
+              </motion.button>
               <UncontrolledCollapse
                 toggler="#navbar_global"
                 navbar
@@ -153,30 +176,53 @@ const DemoNavbar = () => {
                     </Col>
                   </Row>
                 </div>
-                <Nav className="navbar-nav-hover align-items-lg-center" navbar>
+                <Nav className="navbar-nav-hover align-items-lg-center" 
+                  navbar
+                  
+                  variants={{
+                    open: {
+                      clipPath: "inset(0% 0% 0% 0% round 10px)",
+                      transition: {
+                        type: "spring",
+                        bounce: 0,
+                        duration: 0.7,
+                        delayChildren: 0.3,
+                        staggerChildren: 0.05
+                      }
+                    },
+                    closed: {
+                      clipPath: "inset(10% 50% 90% 50% round 10px)",
+                      transition: {
+                        type: "spring",
+                        bounce: 0,
+                        duration: 0.3
+                      }
+                    }
+                  }}
+                  >
                   <NavItem >
                     <NavLink to='/' tag={Link}>
-                      <span className={`nav-link-inner--text ${activeNavItem === "/" ? 'active' : ""}`} >Home</span>
+                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "/" ? 'active' : ""}`} >Home</motion.span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
                     <NavLink to='/officers' tag={Link}>
-                      <span className={`nav-link-inner--text ${activeNavItem === "officers" ? 'active' : ""}`} >Officers</span>
+                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "officers" ? 'active' : ""}`} >Officers</motion.span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
                     <NavLink to='/participants' tag={Link}>
-                      <span className={`nav-link-inner--text ${activeNavItem === "participants" ? 'active' : ""}`}>Participants</span>
+                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "participants" ? 'active' : ""}`}>Participants</motion.span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
                     <NavLink to='/mentors' tag={Link}>
-                      <span className={`nav-link-inner--text ${activeNavItem === "mentors" ? 'active' : ""}`}>Mentors</span>
+                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "mentors" ? 'active' : ""}`}>Mentors</motion.span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
                     <NavLink to='/celebrations' tag={Link}>
-                      <span className={`nav-link-inner--text ${activeNavItem === "celebrations" ? 'active' : ""}`}>Celebrations</span>
+                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "celebrations" ? 'active' : ""}`}>Celebrations</motion.span>
                     </NavLink>
                   </NavItem>
                 </Nav>
