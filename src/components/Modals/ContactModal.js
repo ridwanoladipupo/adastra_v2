@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // reactstrap components
 import {
   Button,
@@ -20,8 +20,17 @@ import {
 // Formik Validation
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import axios from 'axios';
+import swal from 'sweetalert';
+import { PulseLoader } from 'react-spinners';
 
 const ContactModal = ({ isOpen, setIsOpen }) => {
+
+    const [isLoading, setIsLoading] = useState(false)
+
+    const handleClose = () => {
+        setIsOpen(!isOpen)
+    }
 
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
@@ -37,17 +46,27 @@ const ContactModal = ({ isOpen, setIsOpen }) => {
             email: Yup.string().required("Please Enter Your Email").email("Invalid email address"),
             message: Yup.string().required("Please Enter Your Message"),
         }),
-        onSubmit: (values, {resetForm}) => {
-            // dispatch(createLogin(values))
-            console.log('values', values)
+        onSubmit: async(values, {resetForm}) => {
+            try {
+                setIsLoading(true)
+                const response = await axios.post('https://getform.io/f/ab9b54b2-ce56-4585-a17f-f0adcc64f6f1', values);
+                console.log('response', response)
+                setIsLoading(false)
+                swal("Bravo!", "Contact Form Submitted Successfully", "success");
+                handleClose()
+
+            } catch (error) {
+                console.log('Error', error)
+                swal("Sorry!", `${error.message}`, "danger");
+                setIsLoading(false)
+                handleClose()
+            }
             resetForm({ values: '' })
       
           },
       });
 
-    const handleClose = () => {
-        setIsOpen(!isOpen)
-    }
+   
     return (
       <>
         {/* Modal */}
@@ -138,7 +157,8 @@ const ContactModal = ({ isOpen, setIsOpen }) => {
                             validation.handleSubmit();
                             return false;
                         }}>
-                        Submit
+                        {isLoading ? <PulseLoader color="#fff" size={7} /> : "Submit"}
+
                     </Button>
                 </div>
             </Form>
