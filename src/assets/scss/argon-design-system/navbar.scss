@@ -218,7 +218,7 @@
     .navbar-transparent {
         .navbar-nav {
             .nav-link {
-                color: $navbar-dark-color;
+                color: #8BA8F5;
 
                 @include hover-focus {
                     color: $navbar-dark-hover-color;
@@ -228,6 +228,9 @@
                     color: $navbar-dark-disabled-color;
                 }
             }
+            .active {
+                color: #fff;
+              }
 
             .show > .nav-link,
             .active > .nav-link,

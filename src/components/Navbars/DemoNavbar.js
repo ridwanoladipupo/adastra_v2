@@ -23,11 +23,6 @@ import Headroom from "headroom.js";
 import {
   Button,
   UncontrolledCollapse,
-  DropdownMenu,
-  DropdownItem,
-  DropdownToggle,
-  UncontrolledDropdown,
-  Media,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -36,7 +31,6 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip,
 } from "reactstrap";
 import ContactModal from "components/Modals/ContactModal";
 
@@ -44,6 +38,7 @@ const DemoNavbar = () => {
   const [collapseClasses, setCollapseClasses] = useState('')
   const [collapseOpen, setCollapseOpen] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const [activeNavItem, setActiveNavItem] = useState("home"); 
 
  useEffect(() => {
   let headroom = new Headroom(document.getElementById("navbar-main"));
@@ -51,6 +46,43 @@ const DemoNavbar = () => {
     headroom.init();
  }, [])
 
+ useEffect(() => {
+  // Inside your useEffect or wherever you're determining the active page
+const currentPath = window.location.pathname;
+let activeItem = "/"; // Default active item
+
+if (currentPath === "/mission") {
+  activeItem = "mission";
+}
+
+if (currentPath === "/officers") {
+  activeItem = "officers";
+}
+
+if (currentPath === "/participants") {
+  activeItem = "participants";
+}
+if (currentPath === "/mentors") {
+  activeItem = "mentors";
+}
+if (currentPath === "/sponsors") {
+  activeItem = "sponsors";
+}
+if (currentPath === "/celebrations") {
+  activeItem = "celebrations";
+}
+if (currentPath === "/testimonial") {
+  activeItem = "testimonial";
+}
+
+if (currentPath === "/contact") {
+  activeItem = "contact";
+}
+// Add similar logic for other navigation items
+
+setActiveNavItem(activeItem);
+
+}, [activeNavItem])
 
   const onExiting = () => {
     setCollapseClasses("collapsing-out");
@@ -110,56 +142,29 @@ const DemoNavbar = () => {
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
                   <NavItem >
                     <NavLink to='/' tag={Link}>
-                      <span className="nav-link-inner--text">Home</span>
+                      <span className={`nav-link-inner--text ${activeNavItem === "/" ? 'active' : ""}`} >Home</span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
                     <NavLink to='/officers' tag={Link}>
-                      <span className="nav-link-inner--text">Officers</span>
+                      <span className={`nav-link-inner--text ${activeNavItem === "officers" ? 'active' : ""}`} >Officers</span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
                     <NavLink to='/participants' tag={Link}>
-                      <span className="nav-link-inner--text">Participants</span>
+                      <span className={`nav-link-inner--text ${activeNavItem === "participants" ? 'active' : ""}`}>Participants</span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
                     <NavLink to='/mentors' tag={Link}>
-                      <span className="nav-link-inner--text">Mentors</span>
+                      <span className={`nav-link-inner--text ${activeNavItem === "mentors" ? 'active' : ""}`}>Mentors</span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
                     <NavLink to='/celebrations' tag={Link}>
-                      <span className="nav-link-inner--text">Celebrations</span>
+                      <span className={`nav-link-inner--text ${activeNavItem === "celebrations" ? 'active' : ""}`}>Celebrations</span>
                     </NavLink>
                   </NavItem>
-
-                  {/* <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                      <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Home</span>
-                    </DropdownToggle>
-                  </UncontrolledDropdown> */}
-                  {/* <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                      <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Testimonials</span>
-                    </DropdownToggle>
-                    <DropdownMenu>
-                      <DropdownItem to="/landing-page" tag={Link}>
-                        Landing
-                      </DropdownItem>
-                      <DropdownItem to="/profile-page" tag={Link}>
-                        Profile
-                      </DropdownItem>
-                      <DropdownItem to="/login-page" tag={Link}>
-                        Login
-                      </DropdownItem>
-                      <DropdownItem to="/register-page" tag={Link}>
-                        Register
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown> */}
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem className="d-lg-block ml-lg-4">
