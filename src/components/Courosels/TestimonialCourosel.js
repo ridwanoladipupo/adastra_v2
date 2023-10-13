@@ -22,14 +22,32 @@ import { Button, Container, Row, Col, UncontrolledCarousel } from "reactstrap";
 
 const items = [
   {
-    src: require("assets/img/theme/img-1-1200x1000.jpg"),
-    altText: "Test 111",
+    src: require("assets/img/theme/mabel.jpg"),
+    altText: "",
     caption: "",
     header: "",
   },
   {
-    src: require("assets/img/theme/img-2-1200x1000.jpg"),
-    altText: "Test 222",
+    src: require("assets/img/theme/christopher.jpg"),
+    altText: "",
+    caption: "",
+    header: "",
+  },
+  {
+    src: require("assets/img/theme/arthur.jpg"),
+    altText: "",
+    caption: "",
+    header: "",
+  },
+  {
+    src: require("assets/img/theme/denver.jpg"),
+    altText: "",
+    caption: "",
+    header: "",
+  },
+  {
+    src: require("assets/img/theme/salah.jpg"),
+    altText: "",
     caption: "",
     header: "",
   },
@@ -52,12 +70,10 @@ class TestimonialCarousel extends React.Component {
             <Row className="justify-content-between align-items-center">
               <Col className="mb-5 mb-lg-0" lg="5">
                 <h1 className="text-white font-weight-light">
-                  Testimonials
+                  Discover Stories of Transformation
                 </h1>
                 <p className="lead text-white mt-4">
-                  Argon Design System comes with four pre-built pages to help
-                  you get started faster. You can change the text and images and
-                  you're good to go.
+                Discover inspiring stories of transformation at Ad Astra Foundation, where women, immigrants, and minorities transition from 'unfamiliar' to 'unstoppable.' These testimonials illustrate our mission's impact and the remarkable achievements of those we support.
                 </p>
               </Col>
               <Col className="mb-lg-auto" lg="6">

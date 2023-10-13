@@ -15,26 +15,65 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 // reactstrap components
-import { Card, Container, Row, Col } from "reactstrap";
+import { Button, Card, Container, Row, Col } from "reactstrap";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
+import { useParams } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
-class OfficerList extends React.Component {
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
+const items = [
+    {
+        id: "abed",
+        name: "Abed Mougharbel",
+        title:
+          "President/Founder.",
+        image: require("assets/img/mentors/Abed.jpg"),
+        linkedin: 'https://www.linkedin.com/in/abed-mougharbel-4215684/',
+        description: ' Abed initiated the founding of Ad Astra Foundation with the help of Iris Takamatsu, Karmen Elsen and Eric Maass. He now assumes the position of President. Abed has a great passion for mentoring young Scientists, Technologists and Engineers, He possesses more than thirty years of industry experience, twenty of which are in medical devices. His experience spans Research and Development, New Product Development, and Operations. He spent seventeen years at Medtronic as a Senior Engineering Manager and a Senior Software Applications Manager where he led various development groups in both hardware and software. Prior to Medtronic, Abed worked at GE Semiconductor and National Semiconductor as an Integrated Circuits and Software engineer. While at Medtronic, Abed co-led the corporate mentorship program along with Iris Takamatsu. The mission of the program was to provide guidance and advice to women and minorities whom were identified to pursue the management track. Abed also helped found an Engineering Consulting company, Graphite Consulting, LLC in 2016 and he joined as the Vice President in 2017. Abed holds a Masters in Electronics and Computer Engineering from the University of Maine, a BSEE from Columbia University and a BA in Mathematics and Physics from Hamilton College. He also performed post graduate work at Rutgers University. Abed currently resides in Phoenix, Arizona. On a personal level, Abed enjoys the outdoors, especially as an avid fisherman. He also enjoys woodworking and music, Classical, Baroque, Jazz, and Blues. He plays the classical guitar and recently started to take lessons playing the bass guitar. He is a strong believer in giving back to the community. He worked with underprivileged children and at-risk youth as a volunteer and a mentor.',
+      },
+      {
+        id: "iris",
+        name: "Iris Takamatsu",
+        title:
+          "Treasurer",
+        image: require("assets/img/mentors/Iris.jpg"),
+        linkedin: 'https://www.linkedin.com/in/iris-takamatsu-a5b34321/',
+        description: 'Iris has been a colleague of Abed’s since 2002 when they both worked for Medtronic Inc. in Tempe, Arizona. Iris’s professional Engineering career spans 35 years with experience in the Semiconductor and Medical Device Industries. Her experience started in Manufacturing Operations then transitioned to Product Engineering and Research & Development. She spent seventeen years at Medtronic as a Senior Manufacturing Operations Director and Product Development and Global Test Engineering Director. Prior to Medtronic, Iris worked at Motorola Inc. and On Semiconductor as a Product Director developing technologies and components supporting the Automotive, Communications, Computing, Industrial and Transportation market segments. Recently, Iris collaborated once again with Abed as a Sr. Quality Engineering consultant supporting Medical Device risk management quality system documentation and guidance. Iris holds a Masters and Bachelors in Electrical Engineering from the University of Hawaii at Manoa. She specialized in Electronic Devices and Sensors where she was a teaching assistant and researcher for the Naval Ocean Systems Center. Iris currently resides in Scottsdale, AZ. One of Iris’ proudest achievements was leading the Medtronic Tempe Campus Diversity Council and through her efforts the Medtronic site was awarded the Arizona Diversity Leadership Council Corporate Award. She has a passion for strategic business leadership and talent development. And at this stage in life, Iris is grateful to be able to provide mentoring and guidance to students and young professionals while learning of their personal backgrounds, cultures, and dreams of the future.'
+    
+      },
+      {
+        id: 'eric',
+        name: "Eric Maass",
+        title:
+          "Secretary",
+        image: require("assets/img/mentors/Eric.jpg"),
+        linkedin: 'https://www.linkedin.com/in/eric-maass-9304a3/',
+        description: 'Eric Maass retired as Senior Director, Technical Fellow and DFSS Master Black Belt at Medtronic. He was a co-founder of Six Sigma and was the Lead Master Black Belt at Motorola. He has written: Applying DFSS to Software and Hardware Systems, Flawless Launches – Profitable Products, and Supply Chain Modeling and Optimization. Eric has his Bachelor’s degree in Biology, dual Master’s degree in Biomedical and Chemical Engineering, and doctorate in Industrial Engineering. He is also an Adjunct Professor at Arizona State University.'
+    
+      },
+  ];
+
+const OfficerList = () => {
+    const myRef = useRef();
+    const { id } = useParams();
+
+    useEffect(() => {
+        document.documentElement.scrollTop = 0;
+        document.scrollingElement.scrollTop = 0;
+        myRef.current.scrollTop = 0;
+      }, [])
+
+  const selectedProfile = items.find(item => item.id === id);
+
     return (
       <>
         <DemoNavbar />
-        <main className="profile-page" ref="main">
+        <main className="profile-page" ref={myRef}>
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}
             <div className="shape shape-style-1 shape-aaf alpha-4">
@@ -74,7 +113,7 @@ class OfficerList extends React.Component {
                           <img
                             alt="..."
                             className="rounded-circle"
-                            src={require("assets/img/theme/team-4-800x800.jpg")}
+                            src={selectedProfile.image}
                           />
                         </a>
                       </div>
@@ -83,45 +122,44 @@ class OfficerList extends React.Component {
                       className="order-lg-3 text-lg-right align-self-lg-center"
                       lg="4"
                     >
-                     
+                      <div className="py-4 mt-5" />
+
                     </Col>
                     <Col className="order-lg-1" lg="4">
-                      <div className="card-profile-stats d-flex justify-content-center">
-                       
-                      </div>
+                      <div className="py-lg-5" >
+                        <Link to={`/officers/`}>
+                            <div className="icon icon-shape icon-shape-primary rounded-circle">
+                                <i className="ni ni-bold-left" />
+                            </div>
+                        </Link>
+                        
+                        </div>
                     </Col>
                   </Row>
-                  <div className="text-center mt-5">
+                  <div className="text-center mt-2">
                     <h3>
-                      Jessica Jones{" "}
-                      <span className="font-weight-light">, 27</span>
+                      {selectedProfile.name}
                     </h3>
-                    <div className="h6 font-weight-300">
-                      <i className="ni location_pin mr-2" />
-                      Bucharest, Romania
-                    </div>
-                    <div className="h6 mt-4">
+                    <div className="h6 mt-2">
                       <i className="ni business_briefcase-24 mr-2" />
-                      Solution Manager - Creative Tim Officer
+                      {selectedProfile.title}
                     </div>
-                    <div>
-                      <i className="ni education_hat mr-2" />
-                      University of Computer Science
-                    </div>
+                    <div className="mt-3">
+                            <Button
+                                className="btn-icon-only rounded-circle"
+                                color="facebook"
+                                href={selectedProfile.linkedin}
+                            >
+                                <i className="fa fa-linkedin" />
+                            </Button>
+                        </div>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
                     <Row className="justify-content-center">
                       <Col lg="9">
                         <p>
-                          An artist of considerable range, Ryan — the name taken
-                          by Melbourne-raised, Brooklyn-based Nick Murphy —
-                          writes, performs and records all of his own music,
-                          giving it a warm, intimate feel with a solid groove
-                          structure. An artist of considerable range.
+                           {selectedProfile.description}
                         </p>
-                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                          Show more
-                        </a>
                       </Col>
                     </Row>
                   </div>
@@ -134,6 +172,5 @@ class OfficerList extends React.Component {
       </>
     );
   }
-}
 
 export default OfficerList;

@@ -38,22 +38,25 @@ class SimpleFooter extends React.Component {
             <Row className="justify-content-center text-center mb-5">
               <Col lg="12">
                 <Button
-                  className="btn-icon-only rounded-circle ml-1 mb-4"
+                  className="btn-icon-only ml-1 mb-4"
                   color="facebook"
-                  href="https://www.facebook.com/creativetim"
+                  href="https://www.linkedin.com/in/abed-mougharbel-4215684/"
                   id="tooltip837440414"
                   target="_blank"
                 >
                   <span className="btn-inner--icon">
-                    <i className="fa fa-linkedin-square" />
+                    <i className="fa fa-linkedin" />
                   </span>
                 </Button>
                 <UncontrolledTooltip delay={0} target="tooltip837440414">
                   Follow us on LinkedIn
                 </UncontrolledTooltip>
-                <h4 className=" mb-0 font-weight-light">
-                  Let's get in touch on LinkedIn.
-                </h4>
+                <h5 className="mb-0 font-weight-bold">
+                  Ad Astra Foundation.
+                </h5>
+                <h5 className=" mb-0 font-weight-light">
+                  Arizona, US.
+                </h5>
               </Col>
             </Row>
           </Container>

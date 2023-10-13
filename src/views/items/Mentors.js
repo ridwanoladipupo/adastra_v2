@@ -24,6 +24,41 @@ import { Button, Container, Row, Col } from "reactstrap";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
+
+const items = [
+      {
+        id: '1',
+        name: "Abed Mougharbel",
+        image: require("assets/img/mentors/Abed.jpg"),
+        linkedin: 'https://www.linkedin.com/in/abed-mougharbel-4215684/',
+      },
+      {
+        id: "2",
+        name: "Eric Maass",
+        image: require("assets/img/mentors/Eric.jpg"),
+        linkedin: 'https://www.linkedin.com/in/eric-maass-9304a3/',
+      },
+      {
+        id: "3",
+        name: "Iris Takamatsu",
+        image: require("assets/img/mentors/Iris.jpg"),
+        linkedin: 'https://www.linkedin.com/in/iris-takamatsu-a5b34321/',
+      },
+      {
+        id: "4",
+        name: "Stacey Morris",
+        image: require("assets/img/mentors/Stacey.jpg"),
+        linkedin: 'https://www.linkedin.com/in/staceysmorris/',
+      },
+      {
+        id: "5",
+        name: "Kristin Morris",
+        image: require("assets/img/mentors/Kristin.jpg"),
+        linkedin: 'https://www.linkedin.com/in/kristinallenmorris/',
+      },
+
+  ];
+
 class Mentors extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -69,185 +104,40 @@ class Mentors extends React.Component {
             <Container>
               <Row className="justify-content-center text-center mb-lg">
                 <Col lg="8">
-                  <h2 className="display-3">The amazing Mentors</h2>
+                  <h2 className="display-3">Guiding Lights: Meet Our Mentors</h2>
                   <p className="lead text-muted">
-                    According to the National Oceanic and Atmospheric
-                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                    potentially record maximum.
+                  Experts guiding women, immigrants, and minorities in Technology, Sciences, and Engineering, fostering growth, and positive change within our community.
                   </p>
                 </Col>
               </Row>
               <Row>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
+                {items.map((item, i) => 
+                <Col className="mb-5 mb-lg-0" lg="3" md="6" key={i}>
+                    <div className="px-4 mb-4">
                     <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-1-800x800.jpg")}
-                      style={{ width: "200px" }}
+                        alt="..."
+                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                        src={item.image}
+                        style={{ width: "200px" }}
                     />
                     <div className="pt-4 text-center">
-                      <h5 className="title">
-                      <span className="d-block mb-1">Abed Mougharbel</span>
-                        <small className="h6 text-muted">President/Founder</small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="warning"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="warning"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="warning"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
+                        <h5 className="title">
+                        <span className="d-block mb-1">{item.name}</span>
+                        </h5>
+                        <div className="mt-2">
+                            <Button
+                                className="btn-icon-only rounded-circle"
+                                color="info"
+                                href={item.linkedin}
+                            >
+                                <i className="fa fa-linkedin" />
+                            </Button>
+                        </div>
                     </div>
-                  </div>
-                </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-2-800x800.jpg")}
-                      style={{ width: "200px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Iris Takamatsu</span>
-                        <small className="h6 text-muted">
-                          Treasurer
-                        </small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="primary"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="primary"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="primary"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
                     </div>
-                  </div>
                 </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-3-800x800.jpg")}
-                      style={{ width: "200px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Eric Maass</span>
-                        <small className="h6 text-muted">Secretary</small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="info"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="info"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="info"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col className="mb-5 mb-lg-0" lg="3" md="6">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-3-800x800.jpg")}
-                      style={{ width: "200px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Eric Maass</span>
-                        <small className="h6 text-muted">Secretary</small>
-                      </h5>
-                      <div className="mt-3">
-                        <Button
-                          className="btn-icon-only rounded-circle"
-                          color="info"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-twitter" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="info"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                          className="btn-icon-only rounded-circle ml-1"
-                          color="info"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fa fa-dribbble" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
+                )}
+                
               </Row>
             </Container>
           </section>
