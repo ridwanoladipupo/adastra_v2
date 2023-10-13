@@ -19,6 +19,7 @@ import React from "react";
 
 // reactstrap components
 import { Button, Container, Row, Col, UncontrolledCarousel } from "reactstrap";
+import { motion } from 'framer-motion';
 
 const items = [
   {
@@ -55,6 +56,12 @@ const items = [
 
 class TestimonialCarousel extends React.Component {
   render() {
+    const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+
+    const itemVariants = {
+      hidden: { opacity: 0, y: 10 },
+      visible
+    };
     return (
       <>
         <section className="section section-shaped">
@@ -69,12 +76,12 @@ class TestimonialCarousel extends React.Component {
           <Container className="py-md">
             <Row className="justify-content-between align-items-center">
               <Col className="mb-5 mb-lg-0" lg="5">
-                <h1 className="text-white font-weight-light">
+                <motion.h1 className="text-white font-weight-light" variants={itemVariants}>
                   Discover Stories of Transformation
-                </h1>
-                <p className="lead text-white mt-4">
+                </motion.h1>
+                <motion.p className="lead text-white mt-4" variants={itemVariants}>
                 Discover inspiring stories of transformation at Ad Astra Foundation, where women, immigrants, and minorities transition from 'unfamiliar' to 'unstoppable.' These testimonials illustrate our mission's impact and the remarkable achievements of those we support.
-                </p>
+                </motion.p>
               </Col>
               <Col className="mb-lg-auto" lg="6">
                 <div className="rounded shadow-lg overflow-hidden transform-perspective-right">

@@ -230,7 +230,7 @@
             }
             .active {
                 color: #fff;
-              }
+            }
 
             .show > .nav-link,
             .active > .nav-link,
@@ -261,6 +261,9 @@
         .nav-link {
             padding: .625rem 0;
             color: theme-color("default") !important;
+        }
+        .active {
+            color: #8BA8F5;
         }
 
         .dropdown-menu {

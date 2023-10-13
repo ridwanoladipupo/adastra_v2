@@ -33,6 +33,7 @@ import {
   Col,
 } from "reactstrap";
 import ContactModal from "components/Modals/ContactModal";
+import { motion } from 'framer-motion'; 
 
 const DemoNavbar = () => {
   const [collapseClasses, setCollapseClasses] = useState('')
@@ -48,39 +49,39 @@ const DemoNavbar = () => {
 
  useEffect(() => {
   // Inside your useEffect or wherever you're determining the active page
-const currentPath = window.location.pathname;
-let activeItem = "/"; // Default active item
+  const currentPath = window.location.pathname;
+  let activeItem = "/"; // Default active item
 
-if (currentPath === "/mission") {
-  activeItem = "mission";
-}
+  if (currentPath === "/mission") {
+    activeItem = "mission";
+  }
 
-if (currentPath === "/officers") {
-  activeItem = "officers";
-}
+  if (currentPath === "/officers") {
+    activeItem = "officers";
+  }
 
-if (currentPath === "/participants") {
-  activeItem = "participants";
-}
-if (currentPath === "/mentors") {
-  activeItem = "mentors";
-}
-if (currentPath === "/sponsors") {
-  activeItem = "sponsors";
-}
-if (currentPath === "/celebrations") {
-  activeItem = "celebrations";
-}
-if (currentPath === "/testimonial") {
-  activeItem = "testimonial";
-}
+  if (currentPath === "/participants") {
+    activeItem = "participants";
+  }
+  if (currentPath === "/mentors") {
+    activeItem = "mentors";
+  }
+  if (currentPath === "/sponsors") {
+    activeItem = "sponsors";
+  }
+  if (currentPath === "/celebrations") {
+    activeItem = "celebrations";
+  }
+  if (currentPath === "/testimonial") {
+    activeItem = "testimonial";
+  }
 
-if (currentPath === "/contact") {
-  activeItem = "contact";
-}
-// Add similar logic for other navigation items
+  if (currentPath === "/contact") {
+    activeItem = "contact";
+  }
+  // Add similar logic for other navigation items
 
-setActiveNavItem(activeItem);
+  setActiveNavItem(activeItem);
 
 }, [activeNavItem])
 
@@ -95,6 +96,19 @@ setActiveNavItem(activeItem);
   const handleContact = () => {
     setIsOpen(!isOpen)
   }
+
+  // variant 
+  const buttonVariant= { 
+    hidden: { 
+      x: -20 
+    }, 
+    visible: { 
+      x: 0, 
+      transition: { 
+      duration: 2 
+      } 
+    } 
+  } 
 
     return (
       <>
@@ -168,18 +182,24 @@ setActiveNavItem(activeItem);
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem className="d-lg-block ml-lg-4">
-                    <Button
-                      className="btn-neutral btn-icon"
-                      color="default"
-                      target="_blank"
-                      onClick={handleContact}
-                    >
-                      <i className="ni ni-email-83" />
+                    <motion.div variants={buttonVariant} 
+                        initial="hidden" 
+                        animate="visible" >
+                      <Button
+                        className="btn-neutral btn-icon"
+                        color="default"
+                        target="_blank"
+                        onClick={handleContact}
+                        
+                      >
+                        <i className="ni ni-email-83" />
 
-                      <span className="nav-link-inner--text ml-1">
-                        Contact US
-                      </span>
-                    </Button>
+                        <span className="nav-link-inner--text ml-1">
+                          Contact US
+                        </span>
+                      </Button>
+                    </motion.div>
+                    
                   </NavItem>
                 </Nav>
               </UncontrolledCollapse>

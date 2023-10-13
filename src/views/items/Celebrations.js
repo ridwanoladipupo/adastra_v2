@@ -24,6 +24,7 @@ import { Button, Card, Container, Row, Col } from "reactstrap";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 import { Gallery } from "react-grid-gallery";
+import { motion } from 'framer-motion';
 
 const Celebrations = () => {
 
@@ -85,10 +86,17 @@ const Celebrations = () => {
       },
  ];
 
+    const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+
     return (
       <>
         <DemoNavbar />
-        <main className="profile-page" ref={myRef}>
+        <motion.div className="profile-page" ref={myRef}
+         initial="hidden"
+         animate="visible"
+         exit={{ opacity: 0, transition: { duration: 1 } }}
+         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+         >
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}
             <div className="shape shape-style-1 shape-aaf alpha-4">
@@ -123,16 +131,25 @@ const Celebrations = () => {
             <Container>
               <Row className="justify-content-center text-center mb-lg">
                 <Col lg="8">
-                  <h2 className="display-3">Empowering Through Gatherings</h2>
-                  <p className="lead text-muted">
+                  <motion.h2 className="display-3" 
+                        variants={{
+                        hidden: { opacity: 0, y: -20 },
+                        visible}}
+                    >Empowering Through Gatherings
+                    </motion.h2>
+                    <motion.p className="lead text-muted" 
+                        variants={{
+                        hidden: { opacity: 0, y: -20 },
+                        visible}}
+                    >
                   Join our mission in the Events section, where our community unites for networking, skill-building, and inspiration. Discover diverse events, from workshops to conferences, fostering growth and success in Technology, Sciences, and Engineering.
-                  </p>
+                  </motion.p>
                 </Col>
               </Row>
               <Gallery images={images} />
             </Container>
           </section>
-        </main>
+        </motion.div>
         <SimpleFooter />
       </>
     );

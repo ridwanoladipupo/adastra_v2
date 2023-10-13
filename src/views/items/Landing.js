@@ -25,12 +25,6 @@ import {
   Button,
   Card,
   CardBody,
-  CardImg,
-  FormGroup,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col,
@@ -38,12 +32,12 @@ import {
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
-import CardsFooter from "components/Footers/CardsFooter.js";
 
 // index page sections
 import Download from "../IndexSections/Download.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 import TestimonialCarousel from "components/Courosels/TestimonialCourosel.js";
+import { motion } from 'framer-motion';
 
 class Landing extends React.Component {
   state = {};
@@ -53,11 +47,31 @@ class Landing extends React.Component {
     this.refs.main.scrollTop = 0;
   }
   render() {
+
+    const textVariants = {
+      initial: { opacity: 0, y: 20 },
+      in: { opacity: 1, y: 0 },
+      out: { opacity: 0, y: 20 },
+    };
+
+    const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+
+    const itemVariants = {
+      hidden: { opacity: 0, y: 10 },
+      visible
+    };
+    
     return (
       <>
         <DemoNavbar />
-        <main ref="main">
-          <div className="position-relative">
+        <motion.div 
+          ref="main"
+          initial="hidden"
+          animate="visible"
+          exit={{ opacity: 0, transition: { duration: 1 } }}
+          variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+          >
+          <motion.div className="position-relative" variants={textVariants}>
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-250">
               <div className="shape shape-style-1 shape-aaf">
@@ -72,28 +86,35 @@ class Landing extends React.Component {
                 <span />
               </div>
               <Container className="py-lg-md d-flex mt-4">
-                <div className="col px-0 mt-5 justify-content-center text-center">
+                <motion.div className="col px-0 mt-5 justify-content-center text-center" >
                   <Row className="align-items-center justify-content-center">
                     <Col className="text-center" lg="6">
-                        <div className="">
-                        <img
-                          alt="..."
-                          className="img-fluid"
-                          src={require("assets/img/brand/ad.png")}
-                          style={{ width: "100px" }}
-                        />
-                        <p className="lead text-white">
-                          The Ad Astra Foundation is helping women, immigrants, 
-                          and minorities on their path to success and together, 
-                          helping humanity thrive.
-                        </p>
-                      </div>
+                        <motion.div className="" variants={textVariants}>
+                          <motion.img
+                            alt="..."
+                            className="img-fluid"
+                            src={require("assets/img/brand/ad.png")}
+                            style={{ width: "100px" }}
+                            variants={{
+                              hidden: { opacity: 0, y: -20 },
+                              visible}}
+                          />
+                          <motion.p className="lead text-white" 
+                             variants={{
+                              hidden: { opacity: 0, y: -20 },
+                              visible}}
+                          >
+                            The Ad Astra Foundation is helping women, immigrants, 
+                            and minorities on their path to success and together, 
+                            helping humanity thrive.
+                          </motion.p>
+                      </motion.div>
                     </Col>
                   </Row>
-                </div>
+                </motion.div>
               </Container>
               {/* SVG separator */}
-              <div className="separator separator-bottom separator-skew">
+              <motion.div className="separator separator-bottom separator-skew">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   preserveAspectRatio="none"
@@ -107,65 +128,72 @@ class Landing extends React.Component {
                     points="2560 0 2560 100 0 100"
                   />
                 </svg>
-              </div>
+              </motion.div>
             </section>
             {/* 1st Hero Variation */}
-          </div>
+          </motion.div>
           <section className="section ">
             <Container>
               <Row className="justify-content-center">
                 <Col lg="12">
                   <Row className="row-grid">
                     <Col lg="4">
+                    <motion.div variants={itemVariants}>
                       <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                            <i className="ni ni-check-bold" />
-                          </div>
-                          <h6 className="text-primary text-uppercase">
-                            Our Objectives
-                          </h6>
-                          <p className="description mt-3">
-                            We champion the best future for all women, immigrants, and minorities. 
-                            From unfamiliar to unstoppable!
-                          </p>
-                        </CardBody>
-                      </Card>
+                          <CardBody className="py-5">
+                            <motion.div className="icon icon-shape icon-shape-primary rounded-circle mb-4" variants={itemVariants}>
+                              <i className="ni ni-check-bold" />
+                            </motion.div>
+                            <motion.h6 className="text-primary text-uppercase" variants={itemVariants}>
+                              Our Objectives
+                            </motion.h6>
+                            <motion.p className="description mt-3" variants={itemVariants}>
+                              We champion the best future for all women, immigrants, and minorities. 
+                              From unfamiliar to unstoppable!
+                            </motion.p>
+                          </CardBody>
+                        </Card>
+                    </motion.div>
                     </Col>
                     <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-success rounded-circle mb-4">
-                            <i className="ni ni-glasses-2" />
-                          </div>
-                          <h6 className="text-success text-uppercase">
-                            Our Vision
-                          </h6>
-                          <p className="description mt-3">
-                          Ad Astra inspires women, immigrants, and minorities, 
-                          accelerate their transition to productivity and success in every facet of life and together help humanity thrive.
-                          </p>
-                        </CardBody>
-                      </Card>
+                      <motion.div variants={itemVariants}>
+                        <Card className="card-lift--hover shadow border-0">
+                          <CardBody className="py-5">
+                            <motion.div className="icon icon-shape icon-shape-success rounded-circle mb-4" variants={itemVariants}>
+                              <i className="ni ni-glasses-2" />
+                            </motion.div>
+                            <motion.h6 className="text-success text-uppercase" variants={itemVariants}>
+                              Our Vision
+                            </motion.h6>
+                            <motion.p className="description mt-3" variants={itemVariants}>
+                            Ad Astra inspires women, immigrants, and minorities, 
+                            accelerate their transition to productivity and success in every facet of life and together help humanity thrive.
+                            </motion.p>
+                          </CardBody>
+                        </Card>
+                      </motion.div>
+                     
                     </Col>
                     <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
-                            <i className="ni ni-notification-70" />
-                          </div>
-                          <h6 className="text-warning text-uppercase">
-                            Core Values
-                          </h6>
-                          <p className="description mt-3">
-                          Integrity with Trust <br/>
-                          Dignity with Confidence <br/>
-                          Growth and Diversity with Responsibility
-                          </p>
-                        </CardBody>
-                      </Card>
+                      <motion.div variants={itemVariants}>
+                        <Card className="card-lift--hover shadow border-0">
+                          <CardBody className="py-5">
+                            <motion.div className="icon icon-shape icon-shape-warning rounded-circle mb-4" variants={itemVariants}>
+                              <i className="ni ni-notification-70" />
+                            </motion.div>
+                            <motion.h6 className="text-warning text-uppercase" variants={itemVariants}>
+                              Core Values
+                            </motion.h6>
+                            <motion.p className="description mt-3" variants={itemVariants}>
+                            Integrity with Trust <br/>
+                            Dignity with Confidence <br/>
+                            Growth and Diversity with Responsibility
+                            </motion.p>
+                          </CardBody>
+                        </Card>
+                      </motion.div>
+                     
                     </Col>
-                    
                   </Row>
                 </Col>
               </Row>
@@ -182,14 +210,14 @@ class Landing extends React.Component {
                   />
                 </Col>
                 <Col className="order-md-1" md="6">
-                  <div className="pr-md-5">
-                    <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
+                  <motion.div className="pr-md-5" variants={textVariants}>
+                    <motion.div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5" variants={itemVariants}>
                       <i className="ni ni-spaceship" />
-                    </div>
-                    <h3>Our Mission</h3>
+                    </motion.div>
+                    <motion.h3 variants={itemVariants}>Our Mission</motion.h3>
                     <ul className="list-unstyled mt-2">
                       <li className="py-2">
-                        <div className="d-flex align-items-center">
+                        <motion.div className="d-flex align-items-center" variants={textVariants}>
                           <div>
                             <Badge
                               className="badge-circle mr-3"
@@ -199,14 +227,14 @@ class Landing extends React.Component {
                             </Badge>
                           </div>
                           <div>
-                            <h6 className="mb-0">
+                            <motion.h6 className="mb-0">
                             To contribute to the enrichment and progress of society by providing mentorship and guidance to women, immigrants and minorities in Technology, Sciences and Engineering.
-                            </h6>
+                            </motion.h6>
                           </div>
-                        </div>
+                        </motion.div>
                       </li>
                       <li className="py-2">
-                        <div className="d-flex align-items-center">
+                        <motion.div className="d-flex align-items-center" variants={textVariants}>
                           <div>
                             <Badge
                               className="badge-circle mr-3"
@@ -216,12 +244,12 @@ class Landing extends React.Component {
                             </Badge>
                           </div>
                           <div>
-                            <h6 className="mb-0">To offer tools and guidance so women, immigrants and minorities can succeed professionally in the corporate world or in small businesses.</h6>
+                            <motion.h6 className="mb-0" >To offer tools and guidance so women, immigrants and minorities can succeed professionally in the corporate world or in small businesses.</motion.h6>
                           </div>
-                        </div>
+                        </motion.div>
                       </li>
                       <li className="py-2">
-                        <div className="d-flex align-items-center">
+                        <motion.div className="d-flex align-items-center">
                           <div>
                             <Badge
                               className="badge-circle mr-3"
@@ -231,38 +259,38 @@ class Landing extends React.Component {
                             </Badge>
                           </div>
                           <div>
-                            <h6 className="mb-0">
+                            <motion.h6 className="mb-0" >
                             To empower women, immigrants and minorities to success and prosperity so they in turn as professionals give back and bring change to the world.
-                            </h6>
+                            </motion.h6>
                           </div>
-                        </div>
+                        </motion.div>
                       </li>
                       <li className="py-2">
-                        <div className="d-flex align-items-center">
-                          <div>
+                        <motion.div className="d-flex align-items-center" variants={textVariants}>
+                          <motion.div variants={textVariants}>
                             <Badge
                               className="badge-circle mr-3"
                               color="success"
                             >
                               <i className="ni ni-check-bold" />
                             </Badge>
-                          </div>
-                          <div>
-                            <h6 className="mb-0">
+                          </motion.div>
+                          <motion.div>
+                            <motion.h6 className="mb-0" >
                             To strive without reserve and foster good citizenship through our core values.
-                            </h6>
-                          </div>
-                        </div>
+                            </motion.h6>
+                          </motion.div>
+                        </motion.div>
                       </li>
                     </ul>
-                  </div>
+                  </motion.div>
                 </Col>
               </Row>
             </Container>
           </section>
           <TestimonialCarousel/>
           <Download />
-        </main>
+        </motion.div>
         <SimpleFooter />
       </>
     );

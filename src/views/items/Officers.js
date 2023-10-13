@@ -24,6 +24,8 @@ import { Button, Container, Row, Col } from "reactstrap";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
+
 
 const items = [
     {
@@ -67,10 +69,21 @@ class Officers extends React.Component {
 
    
   render() {
+    const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+
+    const itemVariants = {
+      hidden: { opacity: 0, y: 10 },
+      visible
+    };
     return (
       <>
         <DemoNavbar />
-        <main className="profile-page" ref="main">
+        <motion.div className="profile-page" ref="main"
+            initial="hidden"
+            animate="visible"
+            exit={{ opacity: 0, transition: { duration: 1 } }}
+            variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+        >
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}
             <div className="shape shape-style-1 shape-aaf alpha-4">
@@ -105,10 +118,10 @@ class Officers extends React.Component {
             <Container>
               <Row className="justify-content-center text-center mb-lg">
                 <Col lg="8">
-                  <h2 className="display-3">Leadership at Ad Astra</h2>
-                  <p className="lead text-muted">
+                  <motion.h2 className="display-3" variants={itemVariants}>Leadership at Ad Astra</motion.h2>
+                  <motion.p className="lead text-muted" variants={itemVariants}>
                   Meet our committed officers, leading with integrity and passion, driving our mission to empower women, immigrants, and minorities for a brighter future.
-                  </p>
+                  </motion.p>
                 </Col>
               </Row>
               <Row>
@@ -162,7 +175,7 @@ class Officers extends React.Component {
               </Row>
             </Container>
           </section>
-        </main>
+        </motion.div>
         <SimpleFooter />
       </>
     );

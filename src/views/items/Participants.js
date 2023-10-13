@@ -23,6 +23,7 @@ import { Button, Container, Row, Col } from "reactstrap";
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
+import { motion } from 'framer-motion';
 
 const items = [
     {
@@ -101,10 +102,18 @@ class Participants extends React.Component {
     this.refs.main.scrollTop = 0;
   }
   render() {
+
+      const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+  
     return (
       <>
         <DemoNavbar />
-        <main className="profile-page" ref="main">
+        <motion.div className="profile-page" ref="main"
+            initial="hidden"
+            animate="visible"
+            exit={{ opacity: 0, transition: { duration: 1 } }}
+            variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+        >
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}
             <div className="shape shape-style-1 shape-aaf alpha-4">
@@ -137,10 +146,17 @@ class Participants extends React.Component {
             <Container>
               <Row className="justify-content-center text-center mb-lg">
                 <Col lg="8">
-                  <h2 className="display-3">The Heart of Our Community</h2>
-                  <p className="lead text-muted">
+                  <motion.h2 className="display-3"  
+                  variants={{
+                    hidden: { opacity: 0, y: -20 },
+                    visible}}
+                    >The Heart of Our Community</motion.h2>
+                  <motion.p className="lead text-muted"
+                   variants={{
+                    hidden: { opacity: 0, y: -20 },
+                    visible}}>
                   Explore the vibrant Ad Astra community, a diverse collective of women, immigrants, and minorities driving our mission with unique perspectives, aspirations, and a shared commitment to a brighter future in Technology, Sciences, and Engineering.
-                  </p>
+                  </motion.p>
                 </Col>
               </Row>
               <Row>
@@ -165,22 +181,6 @@ class Participants extends React.Component {
                         >
                             <i className="fa fa-linkedin" />
                         </Button>
-                        {/* <Button
-                            className="btn-icon-only rounded-circle ml-1"
-                            color="primary"
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                        >
-                            <i className="fa fa-facebook" />
-                        </Button>
-                        <Button
-                            className="btn-icon-only rounded-circle ml-1"
-                            color="primary"
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                        >
-                            <i className="fa fa-dribbble" />
-                        </Button> */}
                         </div>
                     </div>
                     </div>
@@ -189,7 +189,7 @@ class Participants extends React.Component {
               </Row>
             </Container>
           </section>
-        </main>
+        </motion.div>
         <SimpleFooter />
       </>
     );

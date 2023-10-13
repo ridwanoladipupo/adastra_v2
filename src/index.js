@@ -30,19 +30,25 @@ import Mentors from "views/items/Mentors";
 import Celebrations from "views/items/Celebrations";
 import Landing from "views/items/Landing";
 
+import { AnimatePresence } from "framer-motion";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <BrowserRouter>
-    <Routes>
-      {/* <Route path="/" exact element={<Index />} /> */}
-      <Route path="/" exact element={<Landing />} />
-      <Route path="/participants" exact element={<Participants />} />
-      <Route path="/mentors" exact element={<Mentors />} />
-      <Route path="/celebrations" exact element={<Celebrations />} />
-      <Route path="/officers" exact element={<Officers />} />
-      <Route path="/officers/:id" exact element={<OfficerList />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  </BrowserRouter>
+  <AnimatePresence mode="wait">
+    <BrowserRouter>
+        <Routes>
+            {/* <Route path="/" exact element={<Index />} /> */}
+            <Route path="/" exact element={<Landing />} />
+            <Route path="/participants" exact element={<Participants />} />
+            <Route path="/mentors" exact element={<Mentors />} />
+            <Route path="/celebrations" exact element={<Celebrations />} />
+            <Route path="/officers" exact element={<Officers />} />
+            <Route path="/officers/:id" exact element={<OfficerList />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+      
+    </BrowserRouter>
+  </AnimatePresence>
+
 );

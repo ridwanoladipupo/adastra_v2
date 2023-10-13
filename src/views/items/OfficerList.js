@@ -25,6 +25,7 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
 
 const items = [
     {
@@ -70,10 +71,18 @@ const OfficerList = () => {
 
   const selectedProfile = items.find(item => item.id === id);
 
+  const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+
     return (
       <>
         <DemoNavbar />
-        <main className="profile-page" ref={myRef}>
+        <motion.div className="profile-page" 
+            ref={myRef}
+            initial="hidden"
+            animate="visible"
+            exit={{ opacity: 0, transition: { duration: 1 } }}
+            variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+        >
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}
             <div className="shape shape-style-1 shape-aaf alpha-4">
@@ -108,15 +117,20 @@ const OfficerList = () => {
                 <div className="px-4">
                   <Row className="justify-content-center">
                     <Col className="order-lg-2" lg="3">
-                      <div className="card-profile-image">
+                      <motion.div className="card-profile-image"
+                        variants={{
+                            hidden: { opacity: 0, y: -20 },
+                            visible}}
+                        >
                         <a href="#pablo" onClick={(e) => e.preventDefault()}>
                           <img
                             alt="..."
                             className="rounded-circle"
                             src={selectedProfile.image}
+                            
                           />
                         </a>
-                      </div>
+                      </motion.div>
                     </Col>
                     <Col
                       className="order-lg-3 text-lg-right align-self-lg-center"
@@ -137,14 +151,28 @@ const OfficerList = () => {
                     </Col>
                   </Row>
                   <div className="text-center mt-2">
-                    <h3>
+                    <motion.h3 
+                        variants={{
+                            hidden: { opacity: 0, y: -20 },
+                            visible}}
+                        >
                       {selectedProfile.name}
-                    </h3>
-                    <div className="h6 mt-2">
+                    </motion.h3>
+                    <motion.div 
+                        className="h6 mt-2"
+                        variants={{
+                            hidden: { opacity: 0, y: -20 },
+                            visible}}
+                        >
                       <i className="ni business_briefcase-24 mr-2" />
                       {selectedProfile.title}
-                    </div>
-                    <div className="mt-3">
+                    </motion.div>
+                    <motion.div 
+                        className="mt-3"
+                        variants={{
+                            hidden: { opacity: 0, y: -20 },
+                            visible}}
+                        >
                             <Button
                                 className="btn-icon-only rounded-circle"
                                 color="facebook"
@@ -152,14 +180,17 @@ const OfficerList = () => {
                             >
                                 <i className="fa fa-linkedin" />
                             </Button>
-                        </div>
+                        </motion.div>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
                     <Row className="justify-content-center">
                       <Col lg="9">
-                        <p>
+                        <motion.p variants={{
+                              hidden: { opacity: 0, y: -20 },
+                              visible}}
+                        >
                            {selectedProfile.description}
-                        </p>
+                        </motion.p>
                       </Col>
                     </Row>
                   </div>
@@ -167,7 +198,7 @@ const OfficerList = () => {
               </Card>
             </Container>
           </section>
-        </main>
+        </motion.div>
         <SimpleFooter />
       </>
     );
