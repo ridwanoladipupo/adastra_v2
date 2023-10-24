@@ -40,7 +40,7 @@ class SimpleFooter extends React.Component {
                 <Button
                   className="btn-icon-only ml-1 mb-4"
                   color="facebook"
-                  href="https://www.linkedin.com/in/abed-mougharbel-4215684/"
+                  href="https://www.linkedin.com/company/ad-astra-foundation-inc/"
                   id="tooltip837440414"
                   target="_blank"
                 >

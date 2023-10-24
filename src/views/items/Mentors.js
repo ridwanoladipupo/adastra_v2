@@ -57,6 +57,12 @@ const items = [
         image: require("assets/img/mentors/Kristin.jpg"),
         linkedin: 'https://www.linkedin.com/in/kristinallenmorris/',
       },
+      {
+        id: "6",
+        name: "Nandini Srinivasan",
+        image: require("assets/img/mentors/Nandini.jpg"),
+        linkedin: 'https://www.linkedin.com/in/nandini-srinivasan-630128/',
+      },
 
   ];
 
@@ -145,7 +151,7 @@ class Mentors extends React.Component {
                         <div className="mt-2">
                             <Button
                                 className="btn-icon-only rounded-circle"
-                                color="info"
+                                color="primary"
                                 href={item.linkedin}
                             >
                                 <i className="fa fa-linkedin" />

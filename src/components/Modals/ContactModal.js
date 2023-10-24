@@ -49,7 +49,7 @@ const ContactModal = ({ isOpen, setIsOpen }) => {
         onSubmit: async(values, {resetForm}) => {
             try {
                 setIsLoading(true)
-                const response = await axios.post('https://getform.io/f/ab9b54b2-ce56-4585-a17f-f0adcc64f6f1', values);
+                const response = await axios.post('https://getform.io/f/086d1635-d42a-4fe6-a4d4-8cfe86c9b2e9', values);
                 console.log('response', response)
                 setIsLoading(false)
                 swal("Bravo!", "Contact Form Submitted Successfully", "success");

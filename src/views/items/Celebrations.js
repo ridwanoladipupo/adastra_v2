@@ -37,11 +37,7 @@ const Celebrations = () => {
   }, [])
 
   const images = [
-    {
-       src: require("assets/img/celebration/c_1.jpeg"),
-       width: 550,
-       height: 194,
-    },
+
     {
        src: require("assets/img/celebration/c_3.jpeg"),
        width: 320,
