@@ -63,7 +63,18 @@ const items = [
         image: require("assets/img/mentors/Nandini.jpg"),
         linkedin: 'https://www.linkedin.com/in/nandini-srinivasan-630128/',
       },
-
+      {
+        id: "7",
+        name: "Catalina Stephens",
+        image: require("assets/img/mentors/Catalina.jpg"),
+        linkedin: 'https://www.linkedin.com/in/catalina-stephens-bb20524/',
+      },
+      {
+        id: "8",
+        name: "Karin Rudman",
+        image: require("assets/img/mentors/Karin.jpg"),
+        linkedin: 'https://www.linkedin.com/in/karin-rudman/',
+      },
   ];
 
 class Mentors extends React.Component {
