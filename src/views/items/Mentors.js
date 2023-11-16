@@ -63,19 +63,22 @@ const items = [
         image: require("assets/img/mentors/Nandini.jpg"),
         linkedin: 'https://www.linkedin.com/in/nandini-srinivasan-630128/',
       },
-      {
-        id: "7",
-        name: "Catalina Stephens",
-        image: require("assets/img/mentors/Catalina.jpg"),
-        linkedin: 'https://www.linkedin.com/in/catalina-stephens-bb20524/',
-      },
-      {
-        id: "8",
-        name: "Karin Rudman",
-        image: require("assets/img/mentors/Karin.jpg"),
-        linkedin: 'https://www.linkedin.com/in/karin-rudman/',
-      },
   ];
+
+  const resources = [
+    {
+      id: "1",
+      name: "Catalina Stephens",
+      image: require("assets/img/mentors/Catalina.jpg"),
+      linkedin: 'https://www.linkedin.com/in/catalina-stephens-bb20524/',
+    },
+    {
+      id: "2",
+      name: "Karin Rudman",
+      image: require("assets/img/mentors/Karin.jpg"),
+      linkedin: 'https://www.linkedin.com/in/karin-rudman/',
+    },
+];
 
 class Mentors extends React.Component {
   componentDidMount() {
@@ -172,7 +175,53 @@ class Mentors extends React.Component {
                     </div>
                 </Col>
                 )}
-                
+              </Row>
+
+              <Row className="justify-content-center text-center mb-lg mt-5">
+                <Col lg="8">
+                  <motion.h2 
+                   variants={{
+                    hidden: { opacity: 0, y: -20 },
+                    visible}}
+                        className="display-3 mt-4">
+                        Unlock Expertise: Resources and SME
+                    </motion.h2>
+                  <motion.p className="lead text-muted"
+                  variants={{
+                    hidden: { opacity: 0, y: -20 },
+                    visible}}>
+                  Explore curated resources and connect with subject matter experts dedicated to empowering women, immigrants, and minorities in Technology, Sciences, and Engineering. Access valuable tools and insights for success.
+                  </motion.p>
+                </Col>
+              </Row>
+
+              <Row>
+                {resources.map((item, i) => 
+                  <Col className="mb-5 mb-lg-0" lg="6" md="6" key={i}>
+                      <div className="px-4 mb-4">
+                      <img
+                          alt="..."
+                          className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                          src={item.image}
+                          style={{ width: "200px" }}
+                      />
+                      <div className="pt-4 text-center">
+                          <h5 className="title">
+                          <span className="d-block mb-1">{item.name}</span>
+                          </h5>
+                          <div className="mt-2">
+                              <Button
+                                  className="btn-icon-only rounded-circle"
+                                  color="primary"
+                                  href={item.linkedin}
+                              >
+                                  <i className="fa fa-linkedin" />
+                              </Button>
+                          </div>
+                      </div>
+                      </div>
+                  </Col>
+                )}
               </Row>
             </Container>
           </section>

@@ -92,6 +92,48 @@ const items = [
       image: require("assets/img/participants/Musta.jpg"),
       linkedin: 'https://www.linkedin.com/in/mustapha-tidoo-yussif-96871a146/',
     },
+    {
+      id: "12",
+      name: "Alike Ngbede",
+      image: require("assets/img/participants/Alike.jpg"),
+      linkedin: 'https://www.linkedin.com/in/ngbede-alike-6505553b',
+    },
+    {
+      id: "13",
+      name: "Umu Salamata",
+      image: require("assets/img/participants/Umu.jpg"),
+      linkedin: 'https://www.linkedin.com/in/umu-salamata-jalloh-905bbb173',
+    },
+    {
+      id: "14",
+      name: "Brianne Tengan",
+      image: require("assets/img/participants/Brianne.jpg"),
+      linkedin: 'https://www.linkedin.com/in/briannetengan',
+    },
+    {
+      id: "15",
+      name: "Richmond Kusi",
+      image: require("assets/img/participants/Richmond.jpg"),
+      linkedin: 'https://www.linkedin.com/in/richmond-kusi-69216921a',
+    },
+    {
+      id: "14",
+      name: "Armandine Amessouwoe",
+      image: require("assets/img/participants/Armadine.jpg"),
+      linkedin: 'https://www.linkedin.com/in/armandine-joana',
+    },
+    {
+      id: "17",
+      name: "Vera Umeh",
+      image: require("assets/img/participants/Vera.jpg"),
+      linkedin: 'https://www.linkedin.com/in/veraumeh',
+    },
+    {
+      id: "18",
+      name: "Yibralem Tesfaye",
+      image: require("assets/img/participants/Yibralem.jpg"),
+      linkedin: 'https://www.linkedin.com/in/yibralem-tesfaye',
+    },
   ];
   
 
