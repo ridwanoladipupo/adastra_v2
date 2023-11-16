@@ -134,6 +134,12 @@ const items = [
       image: require("assets/img/participants/Yibralem.jpg"),
       linkedin: 'https://www.linkedin.com/in/yibralem-tesfaye',
     },
+    {
+      id: "19",
+      name: "Mason Wang",
+      image: require("assets/img/participants/Mason.jpg"),
+      linkedin: 'https://www.linkedin.com/in/mason-wang-lkt',
+    },
   ];
   
 
