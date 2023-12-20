@@ -48,13 +48,42 @@ const items = [
     
       },
       {
-        id: 'eric',
-        name: "Eric Maass",
+        id: 'catalina',
+        name: "Catalina Stephens",
         title:
           "Secretary",
+        image: require("assets/img/mentors/Catalina.jpg"),
+        linkedin: 'https://www.linkedin.com/in/catalina-stephens-bb20524/',
+        description: 'Catalina Stephens, with over 20 years of experience, excels in building lasting success through authentic and compassionate relationships. Adept in sales, recruiting, and outplacement, she prioritizes customer-centric approaches. Known for her high energy and commitment to excellence, Catalina enjoys meeting new people, brainstorming solutions, and implementing success plans. As a military family supporter, she provides top-tier staffing services. A Filipina-American foodie, Catalina brings vibrancy to every city she visits. For discussions on staffing, business strategies, or a round of golf, Catalina is the enthusiastic and skilled professional to connect with.'
+    
+      },
+      {
+        id: 'eric-board',
+        name: "Eric Maass",
+        title:
+          "Chairman",
         image: require("assets/img/mentors/Eric.jpg"),
         linkedin: 'https://www.linkedin.com/in/eric-maass-9304a3/',
-        description: 'Eric Maass retired as Senior Director, Technical Fellow and DFSS Master Black Belt at Medtronic. He was a co-founder of Six Sigma and was the Lead Master Black Belt at Motorola. He has written: Applying DFSS to Software and Hardware Systems, Flawless Launches – Profitable Products, and Supply Chain Modeling and Optimization. Eric has his Bachelor’s degree in Biology, dual Master’s degree in Biomedical and Chemical Engineering, and doctorate in Industrial Engineering. He is also an Adjunct Professor at Arizona State University.'
+        description: 'Eric Maass retired as Senior Director, Technical Fellow and DFSS Master Black Belt at Medtronic. He was a co-founder of Six Sigma and was the Lead Master Black Belt at Motorola. He has written: Applying DFSS to Software and Hardware Systems, Flawless Launches – Profitable Products, and Supply Chain Modeling and Optimization. Eric has his Bachelor’s degree in Biology, dual Master’s degree in Biomedical and Chemical Engineering, and doctorate in Industrial Engineering. He is also an Adjunct Professor at Arizona State University'
+    
+      },
+      {
+        id: "abed-board",
+        name: "Abed Mougharbel",
+        title:
+          "Founder",
+        image: require("assets/img/mentors/Abed.jpg"),
+        linkedin: 'https://www.linkedin.com/in/abed-mougharbel-4215684/',
+        description: ' Abed initiated the founding of Ad Astra Foundation with the help of Iris Takamatsu, Karmen Elsen and Eric Maass. He now assumes the position of President. Abed has a great passion for mentoring young Scientists, Technologists and Engineers, He possesses more than thirty years of industry experience, twenty of which are in medical devices. His experience spans Research and Development, New Product Development, and Operations. He spent seventeen years at Medtronic as a Senior Engineering Manager and a Senior Software Applications Manager where he led various development groups in both hardware and software. Prior to Medtronic, Abed worked at GE Semiconductor and National Semiconductor as an Integrated Circuits and Software engineer. While at Medtronic, Abed co-led the corporate mentorship program along with Iris Takamatsu. The mission of the program was to provide guidance and advice to women and minorities whom were identified to pursue the management track. Abed also helped found an Engineering Consulting company, Graphite Consulting, LLC in 2016 and he joined as the Vice President in 2017. Abed holds a Masters in Electronics and Computer Engineering from the University of Maine, a BSEE from Columbia University and a BA in Mathematics and Physics from Hamilton College. He also performed post graduate work at Rutgers University. Abed currently resides in Phoenix, Arizona. On a personal level, Abed enjoys the outdoors, especially as an avid fisherman. He also enjoys woodworking and music, Classical, Baroque, Jazz, and Blues. He plays the classical guitar and recently started to take lessons playing the bass guitar. He is a strong believer in giving back to the community. He worked with underprivileged children and at-risk youth as a volunteer and a mentor.',
+      },
+      {
+        id: "iris-board",
+        name: "Iris Takamatsu",
+        title:
+          "Vice Chairman",
+        image: require("assets/img/mentors/Iris.jpg"),
+        linkedin: 'https://www.linkedin.com/in/iris-takamatsu-a5b34321/',
+        description: 'Iris has been a colleague of Abed’s since 2002 when they both worked for Medtronic Inc. in Tempe, Arizona. Iris’s professional Engineering career spans 35 years with experience in the Semiconductor and Medical Device Industries. Her experience started in Manufacturing Operations then transitioned to Product Engineering and Research & Development. She spent seventeen years at Medtronic as a Senior Manufacturing Operations Director and Product Development and Global Test Engineering Director. Prior to Medtronic, Iris worked at Motorola Inc. and On Semiconductor as a Product Director developing technologies and components supporting the Automotive, Communications, Computing, Industrial and Transportation market segments. Recently, Iris collaborated once again with Abed as a Sr. Quality Engineering consultant supporting Medical Device risk management quality system documentation and guidance. Iris holds a Masters and Bachelors in Electrical Engineering from the University of Hawaii at Manoa. She specialized in Electronic Devices and Sensors where she was a teaching assistant and researcher for the Naval Ocean Systems Center. Iris currently resides in Scottsdale, AZ. One of Iris’ proudest achievements was leading the Medtronic Tempe Campus Diversity Council and through her efforts the Medtronic site was awarded the Arizona Diversity Leadership Council Corporate Award. She has a passion for strategic business leadership and talent development. And at this stage in life, Iris is grateful to be able to provide mentoring and guidance to students and young professionals while learning of their personal backgrounds, cultures, and dreams of the future.'
     
       },
   ];

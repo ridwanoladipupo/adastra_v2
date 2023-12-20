@@ -52,9 +52,15 @@ const items = [
     },
     {
       id: "5",
-      name: "Dr. Asad S. Khan",
+      name: "Dr. Asad S. Khan, MD",
       image: require("assets/img/participants/Khan.jpg"),
       linkedin: 'https://www.linkedin.com/in/drasadkhan/',
+    },
+    {
+      id: "14",
+      name: "Jason Amoako-Agyei",
+      image: require("assets/img/participants/Jason.jpg"),
+      linkedin: 'https://www.linkedin.com/in/jasonamoakoagyei/',
     },
     {
       id: "6",
@@ -80,12 +86,12 @@ const items = [
       image: require("assets/img/participants/Munya.jpg"),
       linkedin: 'https://www.linkedin.com/in/mmadzoma/',
     },
-    {
-      id: '10',
-      name: "Daniel Rengifo",
-      image: require("assets/img/participants/Daniel.jpg"),
-      linkedin: 'https://www.linkedin.com/in/daniel-rengifo-00972020a/',
-    },
+    // {
+    //   id: '10',
+    //   name: "Daniel Rengifo",
+    //   image: require("assets/img/participants/Daniel.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/daniel-rengifo-00972020a/',
+    // },
     {
       id: "11",
       name: "Mustapha Tidoo Yussif",
@@ -105,19 +111,13 @@ const items = [
       linkedin: 'https://www.linkedin.com/in/umu-salamata-jalloh-905bbb173',
     },
     {
-      id: "14",
-      name: "Brianne Tengan",
-      image: require("assets/img/participants/Brianne.jpg"),
-      linkedin: 'https://www.linkedin.com/in/briannetengan',
-    },
-    {
       id: "15",
       name: "Richmond Kusi",
       image: require("assets/img/participants/Richmond.jpg"),
       linkedin: 'https://www.linkedin.com/in/richmond-kusi-69216921a',
     },
     {
-      id: "14",
+      id: "16",
       name: "Armandine Amessouwoe",
       image: require("assets/img/participants/Armadine.jpg"),
       linkedin: 'https://www.linkedin.com/in/armandine-joana',

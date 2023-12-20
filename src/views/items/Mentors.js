@@ -51,12 +51,12 @@ const items = [
         image: require("assets/img/mentors/Stacey.jpg"),
         linkedin: 'https://www.linkedin.com/in/staceysmorris/',
       },
-      {
-        id: "5",
-        name: "Kristin Morris",
-        image: require("assets/img/mentors/Kristin.jpg"),
-        linkedin: 'https://www.linkedin.com/in/kristinallenmorris/',
-      },
+      // {
+      //   id: "5",
+      //   name: "Kristin Morris",
+      //   image: require("assets/img/mentors/Kristin.jpg"),
+      //   linkedin: 'https://www.linkedin.com/in/kristinallenmorris/',
+      // },
       {
         id: "6",
         name: "Nandini Srinivasan",
@@ -66,11 +66,17 @@ const items = [
   ];
 
   const resources = [
+    // {
+    //   id: "1",
+    //   name: "Catalina Stephens",
+    //   image: require("assets/img/mentors/Catalina.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/catalina-stephens-bb20524/',
+    // },
     {
       id: "1",
-      name: "Catalina Stephens",
-      image: require("assets/img/mentors/Catalina.jpg"),
-      linkedin: 'https://www.linkedin.com/in/catalina-stephens-bb20524/',
+      name: "Erika Amoako-Agyei",
+      image: require("assets/img/mentors/Erika.jpg"),
+      linkedin: 'https://www.linkedin.com/in/erika-amoako-agyei-4a68824/',
     },
     {
       id: "2",
@@ -190,7 +196,7 @@ class Mentors extends React.Component {
                   variants={{
                     hidden: { opacity: 0, y: -20 },
                     visible}}>
-                  Explore curated resources and connect with subject matter experts dedicated to empowering women, immigrants, and minorities in Technology, Sciences, and Engineering. Access valuable tools and insights for success.
+                      Explore curated resources and connect with subject matter experts dedicated to empowering women, immigrants, and minorities in Technology, Sciences, and Engineering. Access valuable tools and insights for success.
                   </motion.p>
                 </Col>
               </Row>

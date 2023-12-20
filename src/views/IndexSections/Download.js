@@ -59,11 +59,11 @@ class Download extends React.Component {
                         <img
                           alt="..."
                           className="img-fluid"
-                          src={require("assets/img/brand/prop.jpg")}
+                          src={require("assets/img/brand/stoched.png")}
                         />
                       </a>
                       <UncontrolledTooltip delay={0} target="tooltip265846671">
-                        Proprein Labs Technologies
+                        Stoched
                       </UncontrolledTooltip>
                     </Col>
                   </Row>

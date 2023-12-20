@@ -29,6 +29,7 @@ import Participants from "views/items/Participants";
 import Mentors from "views/items/Mentors";
 import Celebrations from "views/items/Celebrations";
 import Landing from "views/items/Landing";
+import Board from "views/items/Board";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -44,6 +45,7 @@ root.render(
             <Route path="/mentors" exact element={<Mentors />} />
             <Route path="/celebrations" exact element={<Celebrations />} />
             <Route path="/officers" exact element={<Officers />} />
+            <Route path="/board" exact element={<Board />} />
             <Route path="/officers/:id" exact element={<OfficerList />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

@@ -79,6 +79,9 @@ const DemoNavbar = () => {
   if (currentPath === "/sponsors") {
     activeItem = "sponsors";
   }
+  if (currentPath === "/board") {
+    activeItem = "board";
+  }
   if (currentPath === "/celebrations") {
     activeItem = "celebrations";
   }
@@ -218,6 +221,11 @@ const DemoNavbar = () => {
                   <NavItem >
                     <NavLink to='/mentors' tag={Link}>
                       <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "mentors" ? 'active' : ""}`}>Mentors</motion.span>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem >
+                    <NavLink to='/board' tag={Link}>
+                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "mentors" ? 'active' : ""}`}>Board</motion.span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
