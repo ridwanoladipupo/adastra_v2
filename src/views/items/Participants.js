@@ -86,12 +86,18 @@ const items = [
       image: require("assets/img/participants/Munya.jpg"),
       linkedin: 'https://www.linkedin.com/in/mmadzoma/',
     },
-    // {
-    //   id: '10',
-    //   name: "Daniel Rengifo",
-    //   image: require("assets/img/participants/Daniel.jpg"),
-    //   linkedin: 'https://www.linkedin.com/in/daniel-rengifo-00972020a/',
-    // },
+    {
+      id: '10',
+      name: "Ayinawu Abdul Malik",
+      image: require("assets/img/participants/Ayinawu.jpg"),
+      linkedin: 'https://www.linkedin.com/in/ayinawu-abdul-malik/',
+    },
+    {
+      id: '10',
+      name: "Issah Seidu",
+      image: require("assets/img/participants/Seidu.jpg"),
+      linkedin: 'https://www.linkedin.com/in/issahseidu/',
+    },
     {
       id: "11",
       name: "Mustapha Tidoo Yussif",
@@ -106,7 +112,7 @@ const items = [
     },
     {
       id: "13",
-      name: "Umu Salamata",
+      name: "Umu Salamata Jalloh",
       image: require("assets/img/participants/Umu.jpg"),
       linkedin: 'https://www.linkedin.com/in/umu-salamata-jalloh-905bbb173',
     },

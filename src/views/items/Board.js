@@ -32,7 +32,7 @@ const items = [
         id: 'eric-board',
         name: "Eric Maass",
         title:
-          "Chairman",
+          "Chair",
         image: require("assets/img/mentors/Eric.jpg"),
         linkedin: 'https://www.linkedin.com/in/eric-maass-9304a3/',
         description: 'Eric Maass retired as Senior Director, Technical Fellow and DFSS Master Black Belt at Medtronic. He was a co-founder of Six Sigma and was the Lead Master Black Belt at Motorola. He has written: Applying DFSS to Software and Hardware Systems, Flawless Launches – Profitable Products, and Supply Chain Modeling and Optimization. Eric has his Bachelor’s degree in Biology, dual Master’s degree in Biomedical and Chemical Engineering, and doctorate in Industrial Engineering. He is also an Adjunct Professor at Arizona State University'
@@ -43,7 +43,7 @@ const items = [
       id: "iris-board",
       name: "Iris Takamatsu",
       title:
-        "Vice Chairman",
+        "Vice Chair",
       image: require("assets/img/mentors/Iris.jpg"),
       linkedin: 'https://www.linkedin.com/in/iris-takamatsu-a5b34321/',
       description: 'Iris has been a colleague of Abed’s since 2002 when they both worked for Medtronic Inc. in Tempe, Arizona. Iris’s professional Engineering career spans 35 years with experience in the Semiconductor and Medical Device Industries. Her experience started in Manufacturing Operations then transitioned to Product Engineering and Research & Development. She spent seventeen years at Medtronic as a Senior Manufacturing Operations Director and Product Development and Global Test Engineering Director. Prior to Medtronic, Iris worked at Motorola Inc. and On Semiconductor as a Product Director developing technologies and components supporting the Automotive, Communications, Computing, Industrial and Transportation market segments. Recently, Iris collaborated once again with Abed as a Sr. Quality Engineering consultant supporting Medical Device risk management quality system documentation and guidance. Iris holds a Masters and Bachelors in Electrical Engineering from the University of Hawaii at Manoa. She specialized in Electronic Devices and Sensors where she was a teaching assistant and researcher for the Naval Ocean Systems Center. Iris currently resides in Scottsdale, AZ. One of Iris’ proudest achievements was leading the Medtronic Tempe Campus Diversity Council and through her efforts the Medtronic site was awarded the Arizona Diversity Leadership Council Corporate Award. She has a passion for strategic business leadership and talent development. And at this stage in life, Iris is grateful to be able to provide mentoring and guidance to students and young professionals while learning of their personal backgrounds, cultures, and dreams of the future.'
@@ -57,6 +57,15 @@ const items = [
         image: require("assets/img/mentors/Abed.jpg"),
         linkedin: 'https://www.linkedin.com/in/abed-mougharbel-4215684/',
         description: ' Abed initiated the founding of Ad Astra Foundation with the help of Iris Takamatsu, Karmen Elsen and Eric Maass. He now assumes the position of President. Abed has a great passion for mentoring young Scientists, Technologists and Engineers, He possesses more than thirty years of industry experience, twenty of which are in medical devices. His experience spans Research and Development, New Product Development, and Operations. He spent seventeen years at Medtronic as a Senior Engineering Manager and a Senior Software Applications Manager where he led various development groups in both hardware and software. Prior to Medtronic, Abed worked at GE Semiconductor and National Semiconductor as an Integrated Circuits and Software engineer. While at Medtronic, Abed co-led the corporate mentorship program along with Iris Takamatsu. The mission of the program was to provide guidance and advice to women and minorities whom were identified to pursue the management track. Abed also helped found an Engineering Consulting company, Graphite Consulting, LLC in 2016 and he joined as the Vice President in 2017. Abed holds a Masters in Electronics and Computer Engineering from the University of Maine, a BSEE from Columbia University and a BA in Mathematics and Physics from Hamilton College. He also performed post graduate work at Rutgers University. Abed currently resides in Phoenix, Arizona. On a personal level, Abed enjoys the outdoors, especially as an avid fisherman. He also enjoys woodworking and music, Classical, Baroque, Jazz, and Blues. He plays the classical guitar and recently started to take lessons playing the bass guitar. He is a strong believer in giving back to the community. He worked with underprivileged children and at-risk youth as a volunteer and a mentor.',
+      },
+      {
+        id: "peter-board",
+        name: "Peter Crichton",
+        title:
+          "Member",
+        image: require("assets/img/mentors/Peter.jpg"),
+        linkedin: 'https://www.linkedin.com/in/peter-crichton-3876a313',
+        description: 'I have retired after 35 years of active involvement in local government for the Town of Mars Hill as Economic-Community Development Director, Lewiston Public Works Superintendent of Administration, Lewiston Assistant City Administrator, Cumberland County Manager, and Auburn City Manager. I have enjoyed my years of public service. It has been a privilege and honor. I will continue to be involved with the Muskie School and hope to be able to do more on the Muskie School Board of Visitors and MPPM Advisory Committee. I look forward to doing things that are important to me.',
       },
   ];
 
@@ -127,7 +136,7 @@ class Board extends React.Component {
               </Row>
               <Row>
                 {items.map((item, i) => 
-                    <Col className="mb-5 mb-lg-0" lg="4" md="6" key={i}>
+                    <Col className="mb-5 mb-lg-0 mt-4" lg="4" md="6" key={i}>
                     <div className="px-4">
                     <Link to={`/officers/${item.id}`}>
                         <img
@@ -151,23 +160,6 @@ class Board extends React.Component {
                             >
                                 <i className="fa fa-linkedin" />
                             </Button>
-                          
-                          {/* <Button
-                            className="btn-icon-only rounded-circle ml-1"
-                            color="warning"
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            <i className="fa fa-facebook" />
-                          </Button>
-                          <Button
-                            className="btn-icon-only rounded-circle ml-1"
-                            color="warning"
-                            href="#pablo"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            <i className="fa fa-dribbble" />
-                          </Button> */}
                         </div>
                       </div>
                     </div>

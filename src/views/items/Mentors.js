@@ -66,12 +66,6 @@ const items = [
   ];
 
   const resources = [
-    // {
-    //   id: "1",
-    //   name: "Catalina Stephens",
-    //   image: require("assets/img/mentors/Catalina.jpg"),
-    //   linkedin: 'https://www.linkedin.com/in/catalina-stephens-bb20524/',
-    // },
     {
       id: "1",
       name: "Erika Amoako-Agyei",
@@ -83,6 +77,12 @@ const items = [
       name: "Karin Rudman",
       image: require("assets/img/mentors/Karin.jpg"),
       linkedin: 'https://www.linkedin.com/in/karin-rudman/',
+    },
+    {
+      id: "3",
+      name: "Elysar Mougharbel",
+      image: require("assets/img/mentors/Elysar.jpg"),
+      linkedin: 'https://www.linkedin.com/in/elysar',
     },
 ];
 
@@ -203,7 +203,7 @@ class Mentors extends React.Component {
 
               <Row>
                 {resources.map((item, i) => 
-                  <Col className="mb-5 mb-lg-0" lg="6" md="6" key={i}>
+                  <Col className="mb-5 mb-lg-0" lg="4" md="4" key={i}>
                       <div className="px-4 mb-4">
                       <img
                           alt="..."
