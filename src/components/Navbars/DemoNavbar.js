@@ -225,7 +225,7 @@ const DemoNavbar = () => {
                   </NavItem>
                   <NavItem >
                     <NavLink to='/board' tag={Link}>
-                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "mentors" ? 'active' : ""}`}>Board</motion.span>
+                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "board" ? 'active' : ""}`}>Board</motion.span>
                     </NavLink>
                   </NavItem>
                   <NavItem >
