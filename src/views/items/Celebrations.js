@@ -44,12 +44,6 @@ const Celebrations = () => {
        height: 212,
        alt: "Boats (Jeshu John - designerspics.com)",
     },
-  
-    {
-        src: require("assets/img/celebration/c_4.jpeg"),
-       width: 320,
-       height: 212,
-    },
     {
         src: require("assets/img/celebration/c_5.jpeg"),
         width: 320,
@@ -62,25 +56,40 @@ const Celebrations = () => {
         height: 212,
         alt: "Boats (Jeshu John - designerspics.com)",
      },
-     {
-        src: require("assets/img/celebration/c_9.jpg"),
-        width: 320,
-        height: 212,
-        alt: "Boats (Jeshu John - designerspics.com)",
-     },
    
      {
         src: require("assets/img/celebration/c_10.jpeg"),
         width: 320,
         height: 212,
      },
-     {
-        src: require("assets/img/celebration/c_11.jpeg"),
-         width: 320,
-         height: 174,
-         caption: "After Rain (Jeshu John - designerspics.com)",
-      },
  ];
+
+ const events = [
+  {
+    src: require("assets/img/celebration/GCU1.jpg"),
+    width: 320,
+    height: 212,
+    alt: "Boats (Jeshu John - designerspics.com)",
+  },
+  {
+    src: require("assets/img/celebration/GCU2.jpg"),
+    width: 320,
+    height: 212,
+    alt: "Boats (Jeshu John - designerspics.com)",
+  },
+  {
+    src: require("assets/img/celebration/GCU3.jpg"),
+    width: 320,
+    height: 212,
+    alt: "Boats (Jeshu John - designerspics.com)",
+  },
+  {
+    src: require("assets/img/celebration/GCU4.jpg"),
+    width: 320,
+    height: 212,
+    alt: "Boats (Jeshu John - designerspics.com)",
+  },
+ ]
 
     const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
@@ -122,8 +131,7 @@ const Celebrations = () => {
             </div>
           </section>
           
-
-        <section className="section section-lg">
+          <section className="section section-lg">
             <Container>
               <Row className="justify-content-center text-center mb-lg">
                 <Col lg="8">
@@ -139,6 +147,40 @@ const Celebrations = () => {
                         visible}}
                     >
                   Join our mission in the Events section, where our community unites for networking, skill-building, and inspiration. Discover diverse events, from workshops to conferences, fostering growth and success in Technology, Sciences, and Engineering.
+                  </motion.p>
+                </Col>
+              </Row>
+
+              <p className="mb-3 display-5 text-center">
+                On March 2,2024 Ad Astra Foundation spent a fantastic morning with the Grand Canyon
+                University (GCU) SWE group. The morning started with Eric Maass offering his “Predictive
+                Engineering Seminar”. After the seminar, a questions-and-answers session took place then
+                followed by 1-1 discussions, networking and planning for future collaboration!
+
+                The officers of Ad Astra Foundation would like express thier gratitude to the SWE group at GCU
+                and we are looking forward to the next gathering!
+              </p>
+              <p className="text-center"> #engineering #SWE #STEM #mentoring</p>
+              <Gallery images={events} />
+            </Container>
+          </section>
+
+        <section className="section section-lg">
+            <Container>
+              <Row className="justify-content-center text-center mb-lg">
+                <Col lg="8">
+                  <motion.h2 className="display-3" 
+                        variants={{
+                        hidden: { opacity: 0, y: -20 },
+                        visible}}
+                    >A Glance into Our Vibrant Celebrations
+                    </motion.h2>
+                    <motion.p className="lead text-muted" 
+                        variants={{
+                        hidden: { opacity: 0, y: -20 },
+                        visible}}
+                    >
+                    Explore the gallery below and immerse yourself in the energy of our recent celebration. Join us on this journey of empowerment, where every event is a step towards a brighter, more inclusive future!
                   </motion.p>
                 </Col>
               </Row>

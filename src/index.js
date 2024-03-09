@@ -17,40 +17,28 @@
 */
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
-import Officers from "views/items/Officers";
-import OfficerList from "views/items/OfficerList";
-import Participants from "views/items/Participants";
-import Mentors from "views/items/Mentors";
-import Celebrations from "views/items/Celebrations";
-import Landing from "views/items/Landing";
-import Board from "views/items/Board";
-
+import ReactGA from 'react-ga';
 import { AnimatePresence } from "framer-motion";
+import App from "App";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const TRACKING_ID = "G-5QNJ2B25GM"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
-root.render(
+
+
+const app = (
   <AnimatePresence mode="wait">
-    <BrowserRouter>
-        <Routes>
-            {/* <Route path="/" exact element={<Index />} /> */}
-            <Route path="/" exact element={<Landing />} />
-            <Route path="/participants" exact element={<Participants />} />
-            <Route path="/mentors" exact element={<Mentors />} />
-            <Route path="/celebrations" exact element={<Celebrations />} />
-            <Route path="/officers" exact element={<Officers />} />
-            <Route path="/board" exact element={<Board />} />
-            <Route path="/officers/:id" exact element={<OfficerList />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-      
-    </BrowserRouter>
-  </AnimatePresence>
-
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>
+</AnimatePresence>
 );
+
+ReactDOM.createRoot(document.getElementById("root")).render(app);
+

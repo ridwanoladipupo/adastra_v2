@@ -16,6 +16,8 @@ import {
   Row,
   Col
 } from "reactstrap";
+import ReactGA from 'react-ga';
+
 
 // Formik Validation
 import * as Yup from "yup";
@@ -53,6 +55,11 @@ const ContactModal = ({ isOpen, setIsOpen }) => {
                 console.log('response', response)
                 setIsLoading(false)
                 swal("Bravo!", "Contact Form Submitted Successfully", "success");
+                ReactGA.event({
+                    category: 'Button Click',
+                    action: 'Submit Contact',
+                    label: 'Contact Page',
+                  });
                 handleClose()
 
             } catch (error) {

@@ -34,6 +34,7 @@ import {
 } from "reactstrap";
 import ContactModal from "components/Modals/ContactModal";
 import { motion } from 'framer-motion'; 
+import ReactGA from 'react-ga';
 
 
 const itemVariants = {
@@ -82,8 +83,8 @@ const DemoNavbar = () => {
   if (currentPath === "/board") {
     activeItem = "board";
   }
-  if (currentPath === "/celebrations") {
-    activeItem = "celebrations";
+  if (currentPath === "/events") {
+    activeItem = "events";
   }
   if (currentPath === "/testimonial") {
     activeItem = "testimonial";
@@ -108,6 +109,11 @@ const DemoNavbar = () => {
 
   const handleContact = () => {
     setIsOpen(!isOpen)
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'Clicked on Contact Us',
+      label: 'Contact Page',
+    });
   }
 
   // variant 
@@ -229,8 +235,8 @@ const DemoNavbar = () => {
                     </NavLink>
                   </NavItem>
                   <NavItem >
-                    <NavLink to='/celebrations' tag={Link}>
-                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "celebrations" ? 'active' : ""}`}>Celebrations</motion.span>
+                    <NavLink to='/events' tag={Link}>
+                      <motion.span variants={itemVariants} className={`nav-link-inner--text ${activeNavItem === "events" ? 'active' : ""}`}>Events</motion.span>
                     </NavLink>
                   </NavItem>
                 </Nav>

@@ -16,15 +16,38 @@
 
 */
 /*eslint-disable*/
+
+
+
 import React from "react";
+import ReactGA from 'react-ga';
 
 // reactstrap components
 import { Button, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
 
-class Download extends React.Component {
-  render() {
-    return (
-      <>
+
+const Download = () => {
+
+  function handleClickGraphite() {
+    // Track a custom event
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'Clicked on Graphite Consulting',
+      label: 'Home Page',
+    });
+  }
+
+  function handleClickStoched() {
+    // Track a custom event
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'Clicked on Stoched',
+      label: 'Home Page',
+    });
+  }
+
+  return (
+    <>
         <section className="section section-lg">
           <Container>
             <Row className="row-grid justify-content-center">
@@ -34,11 +57,12 @@ class Download extends React.Component {
                 </h2>
                 <div className="text-center">
                   <Row className="justify-content-center">
-                    <Col lg="2" xs="4">
+                    <Col lg="4" xs="4">
                       <a
-                        // href="https://www.creative-tim.com/product/argon-design-system?ref=adsr-landing-page"
+                        href="https://graphiteconsulting-usa.com/"
                         id="tooltip255035741"
                         target="_blank"
+                        onClick={handleClickGraphite}
                       >
                         <img
                           alt="..."
@@ -50,11 +74,13 @@ class Download extends React.Component {
                         Graphite Consulting
                       </UncontrolledTooltip>
                     </Col>
-                    <Col lg="2" xs="4">
+                    <Col lg="4" xs="4">
                       <a
-                        // href="https://www.creative-tim.com/product/vue-argon-design-system?ref=adsr-landing-page"
+                        href="https://stoched.com/welcome"
                         id="tooltip265846671"
                         target="_blank"
+                        onClick={handleClickStoched}
+
                       >
                         <img
                           alt="..."
@@ -73,8 +99,9 @@ class Download extends React.Component {
           </Container>
         </section>
       </>
-    );
-  }
+
+  )
 }
 
-export default Download;
+export default Download
+

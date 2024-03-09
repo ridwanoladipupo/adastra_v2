@@ -28,9 +28,20 @@ import {
   Col,
   UncontrolledTooltip,
 } from "reactstrap";
+import ReactGA from 'react-ga';
 
-class SimpleFooter extends React.Component {
-  render() {
+
+const SimpleFooter = () => {
+
+  function handleClickLinkedIn() {
+    // Track a custom event
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'Clicked on LinkedIn',
+      label: 'Home Page',
+    });
+  }
+
     return (
       <>
         <footer className=" footer">
@@ -43,6 +54,7 @@ class SimpleFooter extends React.Component {
                   href="https://www.linkedin.com/company/ad-astra-foundation-inc/"
                   id="tooltip837440414"
                   target="_blank"
+                  onClick={handleClickLinkedIn}
                 >
                   <span className="btn-inner--icon">
                     <i className="fa fa-linkedin" />
@@ -64,6 +76,5 @@ class SimpleFooter extends React.Component {
       </>
     );
   }
-}
 
 export default SimpleFooter;
