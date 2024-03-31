@@ -147,7 +147,7 @@ class Landing extends React.Component {
                             <motion.h6 className="text-primary text-uppercase" variants={itemVariants}>
                               Our Objectives
                             </motion.h6>
-                            <motion.p className="description mt-3" variants={itemVariants}>
+                            <motion.p className="description mt-3 py-3" variants={itemVariants}>
                               We champion the best future for all women, immigrants, and minorities. 
                               From unfamiliar to unstoppable!
                             </motion.p>
@@ -165,7 +165,7 @@ class Landing extends React.Component {
                             <motion.h6 className="text-success text-uppercase" variants={itemVariants}>
                               Our Vision
                             </motion.h6>
-                            <motion.p className="description mt-3" variants={itemVariants}>
+                            <motion.p className="description mt-3 py-1" variants={itemVariants}>
                             Ad Astra inspires women, immigrants, and minorities, 
                             accelerate their transition to productivity and success in every facet of life and together help humanity thrive.
                             </motion.p>
@@ -184,7 +184,7 @@ class Landing extends React.Component {
                             <motion.h6 className="text-warning text-uppercase" variants={itemVariants}>
                               Core Values
                             </motion.h6>
-                            <motion.p className="description mt-3" variants={itemVariants}>
+                            <motion.p className="description mt-3 py-3" variants={itemVariants}>
                             Integrity with Trust <br/>
                             Dignity with Confidence <br/>
                             Growth and Diversity with Responsibility
