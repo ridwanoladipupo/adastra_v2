@@ -34,7 +34,7 @@ import {
 } from "reactstrap";
 import ContactModal from "components/Modals/ContactModal";
 import { motion } from 'framer-motion'; 
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 
 const itemVariants = {

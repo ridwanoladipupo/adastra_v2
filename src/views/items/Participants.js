@@ -142,9 +142,15 @@ const items = [
     },
     {
       id: "19",
-      name: "Mason Wang",
-      image: require("assets/img/participants/Mason.jpg"),
-      linkedin: 'https://www.linkedin.com/in/mason-wang-lkt',
+      name: "Sarra Ben Abdallah",
+      image: require("assets/img/participants/Sarra.png"),
+      linkedin: 'https://www.linkedin.com/in/sarra-ben-abdallah',
+    },
+    {
+      id: "20",
+      name: "Katy Consoer",
+      image: require("assets/img/participants/Katy.png"),
+      linkedin: 'https://www.linkedin.com/in/katyconsoer',
     },
   ];
   

@@ -51,17 +51,17 @@ const items = [
         image: require("assets/img/mentors/Stacey.jpg"),
         linkedin: 'https://www.linkedin.com/in/staceysmorris/',
       },
-      // {
-      //   id: "5",
-      //   name: "Kristin Morris",
-      //   image: require("assets/img/mentors/Kristin.jpg"),
-      //   linkedin: 'https://www.linkedin.com/in/kristinallenmorris/',
-      // },
       {
-        id: "6",
+        id: "5",
         name: "Nandini Srinivasan",
         image: require("assets/img/mentors/Nandini.jpg"),
         linkedin: 'https://www.linkedin.com/in/nandini-srinivasan-630128/',
+      },
+      {
+        id: "6",
+        name: "Zulbiye Jorgensen",
+        image: require("assets/img/mentors/Zulbiye.jpg"),
+        linkedin: 'https://linkedin.com/in/zulbiye-jorgensen-89b26410/',
       },
   ];
 

@@ -10,17 +10,15 @@ import Celebrations from "views/items/Celebrations";
 import Landing from "views/items/Landing";
 import Board from "views/items/Board";
 
-import ReactGA from 'react-ga';
-
-const TRACKING_ID = "G-5QNJ2B25GM"; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
+import ReactGA from 'react-ga4';
 
 const App = () => {
 
     const location = useLocation();
 
     useEffect(() => {
-    ReactGA.pageview(location.pathname + location.search);
+        // ReactGA.send(location.pathname + location.search);
+        ReactGA.send({ hitType: "pageview", page: location.pathname });
     }, [location]);
 
   return (

@@ -16,7 +16,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 
 // Formik Validation

@@ -20,7 +20,7 @@
 
 
 import React from "react";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 // reactstrap components
 import { Button, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
@@ -57,12 +57,12 @@ const Download = () => {
                 </h2>
                 <div className="text-center">
                   <Row className="justify-content-center">
-                    <Col lg="4" xs="4">
+                    <Col lg="4" xs="4" onClick={handleClickGraphite}
+                    >
                       <a
                         href="https://graphiteconsulting-usa.com/"
                         id="tooltip255035741"
                         target="_blank"
-                        onClick={handleClickGraphite}
                       >
                         <img
                           alt="..."
@@ -74,13 +74,11 @@ const Download = () => {
                         Graphite Consulting
                       </UncontrolledTooltip>
                     </Col>
-                    <Col lg="4" xs="4">
+                    <Col lg="4" xs="4" onClick={handleClickStoched}>
                       <a
                         href="https://stoched.com/welcome"
                         id="tooltip265846671"
                         target="_blank"
-                        onClick={handleClickStoched}
-
                       >
                         <img
                           alt="..."

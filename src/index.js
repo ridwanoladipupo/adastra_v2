@@ -23,11 +23,11 @@ import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import { AnimatePresence } from "framer-motion";
 import App from "App";
 
-const TRACKING_ID = "G-5QNJ2B25GM"; // OUR_TRACKING_ID
+const TRACKING_ID = "G-GKN80ZHYF4"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
 
