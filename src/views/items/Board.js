@@ -58,15 +58,15 @@ const items = [
         linkedin: 'https://www.linkedin.com/in/abed-mougharbel-4215684/',
         description: ' Abed initiated the founding of Ad Astra Foundation with the help of Iris Takamatsu, Karmen Elsen and Eric Maass. He now assumes the position of President. Abed has a great passion for mentoring young Scientists, Technologists and Engineers, He possesses more than thirty years of industry experience, twenty of which are in medical devices. His experience spans Research and Development, New Product Development, and Operations. He spent seventeen years at Medtronic as a Senior Engineering Manager and a Senior Software Applications Manager where he led various development groups in both hardware and software. Prior to Medtronic, Abed worked at GE Semiconductor and National Semiconductor as an Integrated Circuits and Software engineer. While at Medtronic, Abed co-led the corporate mentorship program along with Iris Takamatsu. The mission of the program was to provide guidance and advice to women and minorities whom were identified to pursue the management track. Abed also helped found an Engineering Consulting company, Graphite Consulting, LLC in 2016 and he joined as the Vice President in 2017. Abed holds a Masters in Electronics and Computer Engineering from the University of Maine, a BSEE from Columbia University and a BA in Mathematics and Physics from Hamilton College. He also performed post graduate work at Rutgers University. Abed currently resides in Phoenix, Arizona. On a personal level, Abed enjoys the outdoors, especially as an avid fisherman. He also enjoys woodworking and music, Classical, Baroque, Jazz, and Blues. He plays the classical guitar and recently started to take lessons playing the bass guitar. He is a strong believer in giving back to the community. He worked with underprivileged children and at-risk youth as a volunteer and a mentor.',
       },
-      {
-        id: "peter-board",
-        name: "Peter Crichton",
-        title:
-          "Member",
-        image: require("assets/img/mentors/Peter.jpg"),
-        linkedin: 'https://www.linkedin.com/in/peter-crichton-3876a313',
-        description: 'I have retired after 35 years of active involvement in local government for the Town of Mars Hill as Economic-Community Development Director, Lewiston Public Works Superintendent of Administration, Lewiston Assistant City Administrator, Cumberland County Manager, and Auburn City Manager. I have enjoyed my years of public service. It has been a privilege and honor. I will continue to be involved with the Muskie School and hope to be able to do more on the Muskie School Board of Visitors and MPPM Advisory Committee. I look forward to doing things that are important to me.',
-      },
+      // {
+      //   id: "peter-board",
+      //   name: "Peter Crichton",
+      //   title:
+      //     "Member",
+      //   image: require("assets/img/mentors/Peter.jpg"),
+      //   linkedin: 'https://www.linkedin.com/in/peter-crichton-3876a313',
+      //   description: 'I have retired after 35 years of active involvement in local government for the Town of Mars Hill as Economic-Community Development Director, Lewiston Public Works Superintendent of Administration, Lewiston Assistant City Administrator, Cumberland County Manager, and Auburn City Manager. I have enjoyed my years of public service. It has been a privilege and honor. I will continue to be involved with the Muskie School and hope to be able to do more on the Muskie School Board of Visitors and MPPM Advisory Committee. I look forward to doing things that are important to me.',
+      // },
   ];
 
 

@@ -100,3 +100,6 @@
         @include transition($transition-base);
     }
 }
+.aaf-goal .card-body{
+    padding: 0.9rem !important;
+}

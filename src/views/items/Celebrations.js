@@ -37,26 +37,12 @@ const Celebrations = () => {
   }, [])
 
   const images = [
-
-    {
-       src: require("assets/img/celebration/c_3.jpeg"),
-       width: 320,
-       height: 212,
-       alt: "Boats (Jeshu John - designerspics.com)",
-    },
     {
         src: require("assets/img/celebration/c_5.jpeg"),
         width: 320,
         height: 174,
         caption: "After Rain (Jeshu John - designerspics.com)",
      },
-     {
-        src: require("assets/img/celebration/c_6.jpeg"),
-        width: 320,
-        height: 212,
-        alt: "Boats (Jeshu John - designerspics.com)",
-     },
-   
      {
         src: require("assets/img/celebration/c_10.jpeg"),
         width: 320,
@@ -88,6 +74,33 @@ const Celebrations = () => {
     width: 320,
     height: 212,
     alt: "Boats (Jeshu John - designerspics.com)",
+  },
+ ]
+
+ const ieee = [
+  {
+    src: require("assets/img/celebration/IEEEHI01.jpg"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/IEEEHI02.jpg"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/IEEEHI03.jpg"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/IEEEHI04.jpg"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
   },
  ]
 
@@ -152,6 +165,15 @@ const Celebrations = () => {
               </Row>
 
               <p className="mb-3 display-5 text-center">
+              On July 5, 2024, Ad Astra Foundation was invited by the IEEE WIE Phoenix and Hawaii affinity groups to be on a virtual panel addressing Project Management and Career Advancement. The event was  filled with inspiring insights and practical advice for women in engineering. The panel included Heather Monigan, MBA, Iris Takamatsu, and Mary Despe, and was moderated by Quynh Tran. Heather Monigan shared essential project management skills and highlighted their importance in engineering, regardless of one's role. Iris Takamatsu, VP of Ad Astra Foundation, emphasized the benefits of creating an inclusive workforce for business success. 
+              Mary Despe discussed navigating career growth and overcoming job search challenges. Each panelist also shared their personal experiences of overcoming obstacles in their career development and project management
+              </p>
+              <div className="mb-5">
+                <p className="text-center"> #ieee #hawaii #empowering #women #engineering</p>
+                <Gallery images={ieee} />
+              </div>
+
+              <p className="mt-5 display-5 text-center">
                 On March 2,2024 Ad Astra Foundation spent a fantastic morning with the Grand Canyon
                 University (GCU) SWE group. The morning started with Eric Maass offering his “Predictive
                 Engineering Seminar”. After the seminar, a questions-and-answers session took place then
@@ -182,11 +204,18 @@ const Celebrations = () => {
                     >
                     Explore the gallery below and immerse yourself in the energy of our recent celebration. Join us on this journey of empowerment, where every event is a step towards a brighter, more inclusive future!
                   </motion.p>
+
+                  <div className="mt-5">
+                    <Gallery images={images} />
+                  </div>
+                  
                 </Col>
               </Row>
-              <Gallery images={images} />
+            
             </Container>
           </section>
+
+          
         </motion.div>
         <SimpleFooter />
       </>

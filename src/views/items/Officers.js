@@ -47,16 +47,16 @@ const items = [
       description: 'Iris has been a colleague of Abed’s since 2002 when they both worked for Medtronic Inc. in Tempe, Arizona. Iris’s professional Engineering career spans 35 years with experience in the Semiconductor and Medical Device Industries. Her experience started in Manufacturing Operations then transitioned to Product Engineering and Research & Development. She spent seventeen years at Medtronic as a Senior Manufacturing Operations Director and Product Development and Global Test Engineering Director. Prior to Medtronic, Iris worked at Motorola Inc. and On Semiconductor as a Product Director developing technologies and components supporting the Automotive, Communications, Computing, Industrial and Transportation market segments. Recently, Iris collaborated once again with Abed as a Sr. Quality Engineering consultant supporting Medical Device risk management quality system documentation and guidance. Iris holds a Masters and Bachelors in Electrical Engineering from the University of Hawaii at Manoa. She specialized in Electronic Devices and Sensors where she was a teaching assistant and researcher for the Naval Ocean Systems Center. Iris currently resides in Scottsdale, AZ. One of Iris’ proudest achievements was leading the Medtronic Tempe Campus Diversity Council and through her efforts the Medtronic site was awarded the Arizona Diversity Leadership Council Corporate Award. She has a passion for strategic business leadership and talent development. And at this stage in life, Iris is grateful to be able to provide mentoring and guidance to students and young professionals while learning of their personal backgrounds, cultures, and dreams of the future.'
   
     },
-    {
-      id: 'catalina',
-      name: "Catalina Stephens",
-      title:
-        "Secretary",
-      image: require("assets/img/mentors/Catalina.jpg"),
-      linkedin: 'https://www.linkedin.com/in/catalina-stephens-bb20524/',
-      description: 'Catalina Stephens, with over 20 years of experience, excels in building lasting success through authentic and compassionate relationships. Adept in sales, recruiting, and outplacement, she prioritizes customer-centric approaches. Known for her high energy and commitment to excellence, Catalina enjoys meeting new people, brainstorming solutions, and implementing success plans. As a military family supporter, she provides top-tier staffing services. A Filipina-American foodie, Catalina brings vibrancy to every city she visits. For discussions on staffing, business strategies, or a round of golf, Catalina is the enthusiastic and skilled professional to connect with.'
+    // {
+    //   id: 'catalina',
+    //   name: "Catalina Stephens",
+    //   title:
+    //     "Secretary",
+    //   image: require("assets/img/mentors/Catalina.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/catalina-stephens-bb20524/',
+    //   description: 'Catalina Stephens, with over 20 years of experience, excels in building lasting success through authentic and compassionate relationships. Adept in sales, recruiting, and outplacement, she prioritizes customer-centric approaches. Known for her high energy and commitment to excellence, Catalina enjoys meeting new people, brainstorming solutions, and implementing success plans. As a military family supporter, she provides top-tier staffing services. A Filipina-American foodie, Catalina brings vibrancy to every city she visits. For discussions on staffing, business strategies, or a round of golf, Catalina is the enthusiastic and skilled professional to connect with.'
   
-    },
+    // },
   ];
 
 
@@ -126,7 +126,7 @@ class Officers extends React.Component {
               </Row>
               <Row>
                 {items.map((item, i) => 
-                    <Col className="mb-5 mb-lg-0" lg="4" md="6" key={i}>
+                    <Col className="mb-5 mb-lg-0" lg="6" md="6" key={i}>
                     <div className="px-4">
                     <Link to={`/officers/${item.id}`}>
                         <img

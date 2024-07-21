@@ -53,7 +53,7 @@ const Download = () => {
             <Row className="row-grid justify-content-center">
               <Col className="text-center" lg="8">
                 <h2 className="display-3">
-                  Our Sponsors
+                  Our Sponsors & Partners
                 </h2>
                 <div className="text-center">
                   <Row className="justify-content-center">
@@ -88,6 +88,22 @@ const Download = () => {
                       </a>
                       <UncontrolledTooltip delay={0} target="tooltip265846671">
                         Stoched
+                      </UncontrolledTooltip>
+                    </Col>
+                    <Col lg="4" xs="4" onClick={handleClickStoched}>
+                      <a
+                        href="https://stoched.com/welcome"
+                        id="tooltip265846671"
+                        target="_blank"
+                      >
+                        <img
+                          alt="..."
+                          className="img-fluid"
+                          src={require("assets/img/brand/hawaii.jpg")}
+                        />
+                      </a>
+                      <UncontrolledTooltip delay={0} target="tooltip265846671">
+                        IEEE Hawaii Section
                       </UncontrolledTooltip>
                     </Col>
                   </Row>

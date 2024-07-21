@@ -23,31 +23,31 @@ import { motion } from 'framer-motion';
 
 const items = [
   {
-    src: require("assets/img/theme/mabel.jpg"),
+    src: require("assets/img/theme/mabel.png"),
     altText: "",
     caption: "",
     header: "",
   },
   {
-    src: require("assets/img/theme/christopher.jpg"),
+    src: require("assets/img/theme/christopher.png"),
     altText: "",
     caption: "",
     header: "",
   },
   {
-    src: require("assets/img/theme/arthur.jpg"),
+    src: require("assets/img/theme/christabel.png"),
     altText: "",
     caption: "",
     header: "",
   },
   {
-    src: require("assets/img/theme/denver.jpg"),
+    src: require("assets/img/theme/denver.png"),
     altText: "",
     caption: "",
     header: "",
   },
   {
-    src: require("assets/img/theme/salah.jpg"),
+    src: require("assets/img/theme/salah.png"),
     altText: "",
     caption: "",
     header: "",

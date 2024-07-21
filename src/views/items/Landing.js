@@ -132,7 +132,7 @@ class Landing extends React.Component {
             </section>
             {/* 1st Hero Variation */}
           </motion.div>
-          <section className="section ">
+          <section className="section aaf-goal">
             <Container>
               <Row className="justify-content-center">
                 <Col lg="12">
@@ -206,7 +206,7 @@ class Landing extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid floating"
-                    src={require("assets/img/theme/promo-1.png")}
+                    src={require("assets/img/theme/promo-2.png")}
                   />
                 </Col>
                 <Col className="order-md-1" md="6">
@@ -290,6 +290,11 @@ class Landing extends React.Component {
           </section>
           <TestimonialCarousel/>
           <Download />
+          <section className="section">
+            <img alt="..."
+              className="img-fluid floating"
+              src={require("assets/img/brand/AAF_global-1.png")}/>
+          </section>
         </motion.div>
         <SimpleFooter />
       </>

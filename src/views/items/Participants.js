@@ -152,6 +152,18 @@ const items = [
       image: require("assets/img/participants/Katy.png"),
       linkedin: 'https://www.linkedin.com/in/katyconsoer',
     },
+    {
+      id: "21",
+      name: "Wande Olafiosye",
+      image: require("assets/img/participants/Wande.jpg"),
+      linkedin: 'https://www.linkedin.com/in/wande-olafisoye',
+    },
+    {
+      id: "22",
+      name: "Justin Haddad",
+      image: require("assets/img/participants/Justin.jpg"),
+      linkedin: 'https://www.linkedin.com/in/justin-haddad-20aa071b6',
+    },
   ];
   
 
