@@ -46,6 +46,24 @@ const Download = () => {
     });
   }
 
+  function handleClickIeee() {
+    // Track a custom event
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'Clicked on Ieee',
+      label: 'Home Page',
+    });
+  }
+
+  function handleClickGSF() {
+    // Track a custom event
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'Clicked on Global Smile Foundation',
+      label: 'Home Page',
+    });
+  }
+
   return (
     <>
         <section className="section section-lg">
@@ -90,10 +108,10 @@ const Download = () => {
                         Stoched
                       </UncontrolledTooltip>
                     </Col>
-                    <Col lg="4" xs="4" onClick={handleClickStoched}>
+                    <Col lg="4" xs="4" onClick={handleClickIeee}>
                       <a
                         href="https://stoched.com/welcome"
-                        id="tooltip265846671"
+                        id="tooltip265846672"
                         target="_blank"
                       >
                         <img
@@ -102,8 +120,24 @@ const Download = () => {
                           src={require("assets/img/brand/hawaii.jpg")}
                         />
                       </a>
-                      <UncontrolledTooltip delay={0} target="tooltip265846671">
+                      <UncontrolledTooltip delay={0} target="tooltip265846672">
                         IEEE Hawaii Section
+                      </UncontrolledTooltip>
+                    </Col>
+                    <Col lg="4" xs="4" onClick={handleClickGSF}>
+                      <a
+                        href="https://gsmile.org/"
+                        id="tooltip265846673"
+                        target="_blank"
+                      >
+                        <img
+                          alt="..."
+                          className="img-fluid"
+                          src={require("assets/img/brand/gsf.png")}
+                        />
+                      </a>
+                      <UncontrolledTooltip delay={0} target="tooltip265846673">
+                        Global Smile Foundation
                       </UncontrolledTooltip>
                     </Col>
                   </Row>

@@ -291,6 +291,9 @@ class Landing extends React.Component {
           <TestimonialCarousel/>
           <Download />
           <section className="section">
+            <h2 className="display-3 text-center mb-3">
+              Ad Astra Foundation & The World
+              </h2>
             <img alt="..."
               className="img-fluid floating"
               src={require("assets/img/brand/AAF_global-1.png")}/>

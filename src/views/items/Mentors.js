@@ -69,6 +69,12 @@ const items = [
         image: require("assets/img/mentors/Jihan.jpg"),
         linkedin: 'https://linkedin.com/in/jehan-abukharmah-dhsc-candidate-ms-clssgb-cqa-5529a553',
       },
+      {
+        id: "8",
+        name: "Alia Mougharbel",
+        image: require("assets/img/mentors/alia.jpg"),
+        linkedin: 'https://www.linkedin.com/in/aliamougharbel',
+      },
   ];
 
   const resources = [
