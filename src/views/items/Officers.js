@@ -47,6 +47,17 @@ const items = [
       description: 'Iris has been a colleague of Abed’s since 2002 when they both worked for Medtronic Inc. in Tempe, Arizona. Iris’s professional Engineering career spans 35 years with experience in the Semiconductor and Medical Device Industries. Her experience started in Manufacturing Operations then transitioned to Product Engineering and Research & Development. She spent seventeen years at Medtronic as a Senior Manufacturing Operations Director and Product Development and Global Test Engineering Director. Prior to Medtronic, Iris worked at Motorola Inc. and On Semiconductor as a Product Director developing technologies and components supporting the Automotive, Communications, Computing, Industrial and Transportation market segments. Recently, Iris collaborated once again with Abed as a Sr. Quality Engineering consultant supporting Medical Device risk management quality system documentation and guidance. Iris holds a Masters and Bachelors in Electrical Engineering from the University of Hawaii at Manoa. She specialized in Electronic Devices and Sensors where she was a teaching assistant and researcher for the Naval Ocean Systems Center. Iris currently resides in Scottsdale, AZ. One of Iris’ proudest achievements was leading the Medtronic Tempe Campus Diversity Council and through her efforts the Medtronic site was awarded the Arizona Diversity Leadership Council Corporate Award. She has a passion for strategic business leadership and talent development. And at this stage in life, Iris is grateful to be able to provide mentoring and guidance to students and young professionals while learning of their personal backgrounds, cultures, and dreams of the future.'
   
     },
+    {
+      id: "nandini",
+      name: "Nandini Srinivasan",
+      title:
+        "Secretary",
+      image: require("assets/img/mentors/Nandini.jpg"),
+      linkedin: 'https://www.linkedin.com/in/nandini-srinivasan-630128/',
+      description: 'Nandini was the co-founder and chief operations officer of Cactus Semiconductor, a fabless semiconductor company that provided innovative application specific integrated circuits (ASICs) for its customers. In her role as COO, she oversaw all operations: design/product delivery, systems, employees, certifications, quality, vendor/customer management. She was also responsible for finance/budgets/profitability along with the CEO. Her tenure at Cactus saw the company earn accolades such as a spot on the Inc. 500&#39;s &quot;Fastest Growing Businesses&quot; list in 2008 and 2009 and recognition as one of Chandler, AZ&#39;s 100 anchoring companies in 2008. The successful acquisition of Cactus Semiconductor by Cirtec Medical in 2018 marked a fulfilling closure to her professional journey, leading to her retirement from professional life. Before embarking on her entrepreneurial venture, Nandini&#39;s career was shaped by her roles in product and applications engineering at Motorola, On Semiconductor, and Medtronic, where she honed her expertise in analog IC design. Her academic foundation was laid at the prestigious Indian Institute of Technology, Mumbai, followed by a Master of Science in Electrical Engineering from the University of Hawaii, where she and Iris forged a lasting professional and personal bond. Nandini&#39;s passion for helping women led her to join the board of Arizona Foundation for Women from 2018 to 2020, which is dedicated to creating a state where women are safe, healthy, and economically independent. Her volunteer work with Meemli (a 501c non profit) further underscores her commitment to educational equity and providing students with affordable access to high-quality academic support. With a steadfast belief in the mission of the Ad Astra Foundation, Nandini did not hesitate when Abed and Iris invited her to join. Her lifelong advocacy for women, immigrants and minorities, shaped by her own life experiences, drives her to contribute meaningfully to the foundation&#39;s vision. She has been a resident of Chandler, AZ for 34 years and is a 2015 Flinn-Brown Fellow.'
+  
+    },
+  
     // {
     //   id: 'catalina',
     //   name: "Catalina Stephens",
@@ -126,7 +137,7 @@ class Officers extends React.Component {
               </Row>
               <Row>
                 {items.map((item, i) => 
-                    <Col className="mb-5 mb-lg-0" lg="6" md="6" key={i}>
+                    <Col className="mb-5 mb-lg-0" lg="4" md="4" key={i}>
                     <div className="px-4">
                     <Link to={`/officers/${item.id}`}>
                         <img

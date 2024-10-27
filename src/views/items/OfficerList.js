@@ -95,6 +95,16 @@ const items = [
         linkedin: 'https://www.linkedin.com/in/peter-crichton-3876a313',
         description: 'I have retired after 35 years of active involvement in local government for the Town of Mars Hill as Economic-Community Development Director, Lewiston Public Works Superintendent of Administration, Lewiston Assistant City Administrator, Cumberland County Manager, and Auburn City Manager. I have enjoyed my years of public service. It has been a privilege and honor. I will continue to be involved with the Muskie School and hope to be able to do more on the Muskie School Board of Visitors and MPPM Advisory Committee. I look forward to doing things that are important to me.',
       },
+      {
+        id: "nandini",
+        name: "Nandini Srinivasan",
+        title:
+          "Secretary",
+        image: require("assets/img/mentors/Nandini.jpg"),
+        linkedin: 'https://www.linkedin.com/in/nandini-srinivasan-630128/',
+        description: 'Nandini was the co-founder and chief operations officer of Cactus Semiconductor, a fabless semiconductor company that provided innovative application specific integrated circuits (ASICs) for its customers. In her role as COO, she oversaw all operations: design/product delivery, systems, employees, certifications, quality, vendor/customer management. She was also responsible for finance/budgets/profitability along with the CEO. Her tenure at Cactus saw the company earn accolades such as a spot on the Inc. 500&#39;s &quot;Fastest Growing Businesses&quot; list in 2008 and 2009 and recognition as one of Chandler, AZ&#39;s 100 anchoring companies in 2008. The successful acquisition of Cactus Semiconductor by Cirtec Medical in 2018 marked a fulfilling closure to her professional journey, leading to her retirement from professional life. Before embarking on her entrepreneurial venture, Nandini&#39;s career was shaped by her roles in product and applications engineering at Motorola, On Semiconductor, and Medtronic, where she honed her expertise in analog IC design. Her academic foundation was laid at the prestigious Indian Institute of Technology, Mumbai, followed by a Master of Science in Electrical Engineering from the University of Hawaii, where she and Iris forged a lasting professional and personal bond. Nandini&#39;s passion for helping women led her to join the board of Arizona Foundation for Women from 2018 to 2020, which is dedicated to creating a state where women are safe, healthy, and economically independent. Her volunteer work with Meemli (a 501c non profit) further underscores her commitment to educational equity and providing students with affordable access to high-quality academic support. With a steadfast belief in the mission of the Ad Astra Foundation, Nandini did not hesitate when Abed and Iris invited her to join. Her lifelong advocacy for women, immigrants and minorities, shaped by her own life experiences, drives her to contribute meaningfully to the foundation&#39;s vision. She has been a resident of Chandler, AZ for 34 years and is a 2015 Flinn-Brown Fellow.'
+    
+      },
   ];
 
 const OfficerList = () => {

@@ -56,12 +56,12 @@ const items = [
       image: require("assets/img/participants/Khan.jpg"),
       linkedin: 'https://www.linkedin.com/in/drasadkhan/',
     },
-    {
-      id: "14",
-      name: "Jason Amoako-Agyei",
-      image: require("assets/img/participants/Jason.jpg"),
-      linkedin: 'https://www.linkedin.com/in/jasonamoakoagyei/',
-    },
+    // {
+    //   id: "14",
+    //   name: "Jason Amoako-Agyei",
+    //   image: require("assets/img/participants/Jason.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/jasonamoakoagyei/',
+    // },
     {
       id: "6",
       name: "Ridwan Oladipupo",
@@ -74,36 +74,36 @@ const items = [
       image: require("assets/img/participants/Arthur.jpg"),
       linkedin: 'https://www.linkedin.com/in/christabel-arthur/',
     },
-    {
-      id: '8',
-      name: "Christabel Kuuniffaah",
-      image: require("assets/img/participants/Kuuni.jpg"),
-      linkedin: 'https://www.linkedin.com/in/christabel-mwinimaala-kuuniffaah/',
-    },
+    // {
+    //   id: '8',
+    //   name: "Christabel Kuuniffaah",
+    //   image: require("assets/img/participants/Kuuni.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/christabel-mwinimaala-kuuniffaah/',
+    // },
     {
       id: "9",
       name: "Munyaradzi Madzoma",
       image: require("assets/img/participants/Munya.jpg"),
       linkedin: 'https://www.linkedin.com/in/mmadzoma/',
     },
-    {
-      id: '10',
-      name: "Ayinawu Abdul Malik",
-      image: require("assets/img/participants/Ayinawu.jpg"),
-      linkedin: 'https://www.linkedin.com/in/ayinawu-abdul-malik/',
-    },
-    {
-      id: '10',
-      name: "Issah Seidu",
-      image: require("assets/img/participants/Seidu.jpg"),
-      linkedin: 'https://www.linkedin.com/in/issahseidu/',
-    },
-    {
-      id: "11",
-      name: "Mustapha Tidoo Yussif",
-      image: require("assets/img/participants/Musta.jpg"),
-      linkedin: 'https://www.linkedin.com/in/mustapha-tidoo-yussif-96871a146/',
-    },
+    // {
+    //   id: '10',
+    //   name: "Ayinawu Abdul Malik",
+    //   image: require("assets/img/participants/Ayinawu.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/ayinawu-abdul-malik/',
+    // },
+    // {
+    //   id: '10',
+    //   name: "Issah Seidu",
+    //   image: require("assets/img/participants/Seidu.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/issahseidu/',
+    // },
+    // {
+    //   id: "11",
+    //   name: "Mustapha Tidoo Yussif",
+    //   image: require("assets/img/participants/Musta.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/mustapha-tidoo-yussif-96871a146/',
+    // },
     {
       id: "12",
       name: "Alike Ngbede",
@@ -116,24 +116,24 @@ const items = [
       image: require("assets/img/participants/Umu.jpg"),
       linkedin: 'https://www.linkedin.com/in/umu-salamata-jalloh-905bbb173',
     },
-    {
-      id: "15",
-      name: "Richmond Kusi",
-      image: require("assets/img/participants/Richmond.jpg"),
-      linkedin: 'https://www.linkedin.com/in/richmond-kusi-69216921a',
-    },
+    // {
+    //   id: "15",
+    //   name: "Richmond Kusi",
+    //   image: require("assets/img/participants/Richmond.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/richmond-kusi-69216921a',
+    // },
     {
       id: "16",
       name: "Armandine Amessouwoe",
       image: require("assets/img/participants/Armadine.jpg"),
       linkedin: 'https://www.linkedin.com/in/armandine-joana',
     },
-    {
-      id: "17",
-      name: "Vera Umeh",
-      image: require("assets/img/participants/Vera.jpg"),
-      linkedin: 'https://www.linkedin.com/in/veraumeh',
-    },
+    // {
+    //   id: "17",
+    //   name: "Vera Umeh",
+    //   image: require("assets/img/participants/Vera.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/veraumeh',
+    // },
     {
       id: "18",
       name: "Yibralem Tesfaye",
@@ -163,6 +163,30 @@ const items = [
       name: "Justin Haddad",
       image: require("assets/img/participants/Justin.jpg"),
       linkedin: 'https://www.linkedin.com/in/justin-haddad-20aa071b6',
+    },
+    {
+      id: "23",
+      name: "Fadumo Ahmed",
+      image: require("assets/img/participants/fa.jpg"),
+      linkedin: 'https://www.linkedin.com/in/ahmed-fadumo',
+    },
+    {
+      id: "24",
+      name: "Fadumo Hussen",
+      image: require("assets/img/participants/fh.jpg"),
+      linkedin: 'https://www.linkedin.com/in/fadumo-hussen-a51525245',
+    },
+    {
+      id: "25",
+      name: "Serena Clarke",
+      image: require("assets/img/participants/serena.jpg"),
+      linkedin: 'https://www.linkedin.com/in/serena-clarke-8363ba320',
+    },
+    {
+      id: "26",
+      name: "Amna M. Aslam",
+      image: require("assets/img/participants/amna.jpg"),
+      linkedin: 'https://www.linkedin.com/in/amnamaslam/',
     },
   ];
   

@@ -52,6 +52,12 @@ const items = [
     caption: "",
     header: "",
   },
+  {
+    src: require("assets/img/theme/gcu.png"),
+    altText: "",
+    caption: "",
+    header: "",
+  },
 ];
 
 class TestimonialCarousel extends React.Component {

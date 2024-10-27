@@ -64,6 +64,15 @@ const Download = () => {
     });
   }
 
+  function handleClickJ3() {
+    // Track a custom event
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'Clicked on J3 Bioscience',
+      label: 'Home Page',
+    });
+  }
+
   return (
     <>
         <section className="section section-lg">
@@ -138,6 +147,22 @@ const Download = () => {
                       </a>
                       <UncontrolledTooltip delay={0} target="tooltip265846673">
                         Global Smile Foundation
+                      </UncontrolledTooltip>
+                    </Col>
+                    <Col lg="4" xs="4" onClick={handleClickJ3}>
+                      <a
+                        href="https://j3bio.com/"
+                        id="tooltip26584667"
+                        target="_blank"
+                      >
+                        <img
+                          alt="..."
+                          className="img-fluid"
+                          src={require("assets/img/brand/j3b.jpg")}
+                        />
+                      </a>
+                      <UncontrolledTooltip delay={0} target="tooltip26584667">
+                        J3 Bioscience
                       </UncontrolledTooltip>
                     </Col>
                   </Row>

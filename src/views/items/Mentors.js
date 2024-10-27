@@ -75,6 +75,12 @@ const items = [
         image: require("assets/img/mentors/alia.jpg"),
         linkedin: 'https://www.linkedin.com/in/aliamougharbel',
       },
+      {
+        id: "9",
+        name: "Tammy Vanhoy",
+        image: require("assets/img/mentors/tammy.jpg"),
+        linkedin: 'https://www.linkedin.com/in/tammy-vanhoy-3b768b1',
+      },
   ];
 
   const resources = [

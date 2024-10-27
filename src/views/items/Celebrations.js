@@ -79,25 +79,100 @@ const Celebrations = () => {
 
  const ieee = [
   {
-    src: require("assets/img/celebration/IEEEHI01.jpg"),
+    src: require("assets/img/celebration/ieee1.png"),
     width: 320,
     height: 212,
     alt: "IEEE HI",
   },
   {
-    src: require("assets/img/celebration/IEEEHI02.jpg"),
+    src: require("assets/img/celebration/ieee2.png"),
     width: 320,
     height: 212,
     alt: "IEEE HI",
   },
   {
-    src: require("assets/img/celebration/IEEEHI03.jpg"),
+    src: require("assets/img/celebration/ieee3.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  
+ ]
+
+ const ii = [
+  {
+    src: require("assets/img/celebration/ii1.png"),
     width: 320,
     height: 212,
     alt: "IEEE HI",
   },
   {
-    src: require("assets/img/celebration/IEEEHI04.jpg"),
+    src: require("assets/img/celebration/ii2.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ii3.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ii4.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ii5.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  
+  {
+    src: require("assets/img/celebration/ii7.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ii6.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ii8.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  
+ ]
+
+ const ieee09 = [
+  {
+    src: require("assets/img/celebration/ieee091.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ieee092.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ieee093.png"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ieee094.png"),
     width: 320,
     height: 212,
     alt: "IEEE HI",
@@ -165,9 +240,24 @@ const Celebrations = () => {
               </Row>
 
               <p className="mb-3 display-5 text-center">
-              On July 5, 2024, Ad Astra Foundation was invited by the IEEE WIE Phoenix and Hawaii affinity groups to be on a virtual panel addressing Project Management and Career Advancement. The event was  filled with inspiring insights and practical advice for women in engineering. The panel included Heather Monigan, MBA, Iris Takamatsu, and Mary Despe, and was moderated by Quynh Tran. Heather Monigan shared essential project management skills and highlighted their importance in engineering, regardless of one's role. Iris Takamatsu, VP of Ad Astra Foundation, emphasized the benefits of creating an inclusive workforce for business success. 
-              Mary Despe discussed navigating career growth and overcoming job search challenges. Each panelist also shared their personal experiences of overcoming obstacles in their career development and project management
-              </p>
+              On September 13, 2024, the Institute of Electrical and Electronics Engineers (IEEE) Hawaii Chapter, hosted a webinar given by Dr. Eric Maass, PhD, of Ad Astra Foundation. The topic was  “Using Predictive Engineering For Multiple Response Optimization of An Integrated Circuit”. The session was well received and over 50 participants attended from the various regions of the US. After the session, the representative of the IEEE Hawaii Chapter, Brianne Tengan, suggested that upcoming Ad Astra Foundation’s technical webinars to be hosted on the IEEE.tv.
+              </p> 
+              <div className="mb-5">
+                <p className="text-center"> #ieee #hawaii #empowering #women #engineering</p>
+                <Gallery images={ii} />
+              </div>
+
+              <p className="mb-3 display-5 text-center">
+                 On July 6, 2024, the Institute of Electrical and Electronics Engineers (IEEE), Women In Engineering (WIE) of both Hawaii and Phoenix, hosted a virtual panel discussion on Leadership Skills and Project Management, as part of the celebration for Women in Engineering Day. The theme was “Engaging More Women in AI Technologies”. 
+                  The event lasted for one hour. Ad Astra Foundation was invited to participate. Iris Takamatsu, VP and Board Member of Ad Astra Foundation, was one of the panelists along with Heather Monigan and Mary Despe. Heather Morgan is the Director of IP Strategy and Management at Intel, in addition of being an Engineering Professor at Grand Canyon University and the Founder at Kalson Technologies LLC. Mary Despe is Career Coach at University of Hawaii.
+                  Some of the topics which were covered were:
+                  Leadership skills for successful project management in engineering;
+                  Exploring the essential leadership skills necessary for successful project management in engineering;
+                  Understanding and applying engineering economics to enhance project outcomes;
+                  Mentorship and Inclusion: Building a Supportive Environment for Women and Minorities in STEM;
+                  The importance of mentorship in advancing the careers of women, immigrants, and minorities in technology, sciences, and engineering.
+
+              </p> 
               <div className="mb-5">
                 <p className="text-center"> #ieee #hawaii #empowering #women #engineering</p>
                 <Gallery images={ieee} />
@@ -184,10 +274,21 @@ const Celebrations = () => {
               </p>
               <p className="text-center"> #engineering #SWE #STEM #mentoring</p>
               <Gallery images={events} />
+
+              <p className="mb-3 display-5 text-center">
+                On November 2023, the Institute of Electrical and Electronics Engineers (IEEE) Hawaii Chapter, hosted a webinar given by Dr. Eric Maass, PhD, of Ad Astra Foundation. The topic was “Predictive Engineering Melding engineering modeling with probabilistic approaches”. The session was well received and over 140 participants attended. Ad Astra Foundation received several positive comments. Due to the success of the session, a request was made to have Dr. Eric Maass presents again at a later date and the IEEE Hawaii Chapter would extend an invitation to various Chapters of IEEE in the Western Region. In addition, Ad Astra Foundation was also invited to speak at an IEEE Women in Engineering Hawaii Chapter panel discussion.
+
+                The IEEE Hawaii Section is now an official partner institution of Ad Astra Foundation, and the logo was approved to be included on the Ad Astra Foundation Website.
+
+              </p> 
+              <div className="mb-5">
+                <p className="text-center"> #ieee #hawaii #empowering #young #professional #engineering</p>
+                <Gallery images={ieee09} />
+              </div>
             </Container>
           </section>
 
-        <section className="section section-lg">
+        {/* <section className="section section-lg">
             <Container>
               <Row className="justify-content-center text-center mb-lg">
                 <Col lg="8">
@@ -213,7 +314,7 @@ const Celebrations = () => {
               </Row>
             
             </Container>
-          </section>
+          </section> */}
 
           
         </motion.div>
