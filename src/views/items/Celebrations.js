@@ -275,7 +275,7 @@ const Celebrations = () => {
               <p className="text-center"> #engineering #SWE #STEM #mentoring</p>
               <Gallery images={events} />
 
-              <p className="mb-3 display-5 text-center">
+              <p className="mt-5 mb-3 display-5 text-center">
                 On November 2023, the Institute of Electrical and Electronics Engineers (IEEE) Hawaii Chapter, hosted a webinar given by Dr. Eric Maass, PhD, of Ad Astra Foundation. The topic was “Predictive Engineering Melding engineering modeling with probabilistic approaches”. The session was well received and over 140 participants attended. Ad Astra Foundation received several positive comments. Due to the success of the session, a request was made to have Dr. Eric Maass presents again at a later date and the IEEE Hawaii Chapter would extend an invitation to various Chapters of IEEE in the Western Region. In addition, Ad Astra Foundation was also invited to speak at an IEEE Women in Engineering Hawaii Chapter panel discussion.
 
                 The IEEE Hawaii Section is now an official partner institution of Ad Astra Foundation, and the logo was approved to be included on the Ad Astra Foundation Website.
