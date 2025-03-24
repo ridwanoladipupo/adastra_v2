@@ -81,6 +81,18 @@ const items = [
         image: require("assets/img/mentors/tammy.jpg"),
         linkedin: 'https://www.linkedin.com/in/tammy-vanhoy-3b768b1',
       },
+      {
+        id: "10",
+        name: "Salah Elbakri",
+        image: require("assets/img/participants/Salah.jpg"),
+        linkedin: 'https://www.linkedin.com/in/salah-elbakri-0a599b120/',
+      },
+      {
+        id: "10",
+        name: "Monesh Patel",
+        image: require("assets/img/mentors/mp.jpg"),
+        linkedin: 'https://www.linkedin.com/in/moneshpatel/',
+      },
       
   ];
 
@@ -122,18 +134,7 @@ const items = [
       linkedin: 'https://www.linkedin.com/in/peter-crichton-3876a313',
       // description: 'I have retired after 35 years of active involvement in local government for the Town of Mars Hill as Economic-Community Development Director, Lewiston Public Works Superintendent of Administration, Lewiston Assistant City Administrator, Cumberland County Manager, and Auburn City Manager. I have enjoyed my years of public service. It has been a privilege and honor. I will continue to be involved with the Muskie School and hope to be able to do more on the Muskie School Board of Visitors and MPPM Advisory Committee. I look forward to doing things that are important to me.',
     },
-    {
-      id: "10",
-      name: "Salah Elbakri",
-      image: require("assets/img/participants/Salah.jpg"),
-      linkedin: 'https://www.linkedin.com/in/salah-elbakri-0a599b120/',
-    },
-    {
-      id: "10",
-      name: "Monesh Patel",
-      image: require("assets/img/mentors/mp.jpg"),
-      linkedin: 'https://www.linkedin.com/in/moneshpatel/',
-    },
+    
 ];
 
 class Mentors extends React.Component {
