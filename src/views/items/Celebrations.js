@@ -152,6 +152,39 @@ const Celebrations = () => {
   
  ]
 
+ const ij = [
+  {
+    src: require("assets/img/celebration/ij1.jpg"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ij2.jpg"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ij3.jpg"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  {
+    src: require("assets/img/celebration/ij4.jpg"),
+    width: 320,
+    height: 212,
+    alt: "IEEE HI",
+  },
+  // {
+  //   src: require("assets/img/celebration/ij5.jpg"),
+  //   width: 320,
+  //   height: 212,
+  //   alt: "IEEE HI",
+  // },  
+ ]
+
  const ieee09 = [
   {
     src: require("assets/img/celebration/ieee091.png"),
@@ -238,6 +271,15 @@ const Celebrations = () => {
                   </motion.p>
                 </Col>
               </Row>
+              <p className="mb-3 display-5 text-center">
+                The Society of Women Engineers of Grand Canyon University (GCU) hosted Ad Astra Foundation. on Monday February 24, 2025. 
+                Dr. Eric Maass, PhD, presented a workshop using Lean Six-Sigma proven techniques to increase efficiency and to remove waste from processes, hence insuring high-quality production and operation. 
+                At the end of the workshop, all GCU engineering students, women and men who attended, were issued Lean Six Sigma White Belt Certifications. The lessons that were taught are principles which the attendees would carry out into the real world of engineering
+              </p> 
+              <div className="mb-5">
+                <p className="text-center"> #ieee #hawaii #empowering #women #engineering</p>
+                <Gallery images={ij} />
+              </div>
 
               <p className="mb-3 display-5 text-center">
               On September 13, 2024, the Institute of Electrical and Electronics Engineers (IEEE) Hawaii Chapter, hosted a webinar given by Dr. Eric Maass, PhD, of Ad Astra Foundation. The topic was  “Using Predictive Engineering For Multiple Response Optimization of An Integrated Circuit”. The session was well received and over 50 participants attended from the various regions of the US. After the session, the representative of the IEEE Hawaii Chapter, Brianne Tengan, suggested that upcoming Ad Astra Foundation’s technical webinars to be hosted on the IEEE.tv.

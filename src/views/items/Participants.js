@@ -45,12 +45,6 @@ const items = [
       linkedin: 'https://www.linkedin.com/in/denver-chikokonya/',
     },
     {
-      id: "4",
-      name: "Salah Elbakri",
-      image: require("assets/img/participants/Salah.jpg"),
-      linkedin: 'https://www.linkedin.com/in/salah-elbakri-0a599b120/',
-    },
-    {
       id: "5",
       name: "Dr. Asad S. Khan, MD",
       image: require("assets/img/participants/Khan.jpg"),
@@ -134,12 +128,12 @@ const items = [
     //   image: require("assets/img/participants/Vera.jpg"),
     //   linkedin: 'https://www.linkedin.com/in/veraumeh',
     // },
-    {
-      id: "18",
-      name: "Yibralem Tesfaye",
-      image: require("assets/img/participants/Yibralem.jpg"),
-      linkedin: 'https://www.linkedin.com/in/yibralem-tesfaye',
-    },
+    // {
+    //   id: "18",
+    //   name: "Yibralem Tesfaye",
+    //   image: require("assets/img/participants/Yibralem.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/yibralem-tesfaye',
+    // },
     {
       id: "19",
       name: "Sarra Ben Abdallah",
@@ -187,6 +181,30 @@ const items = [
       name: "Amna M. Aslam",
       image: require("assets/img/participants/amna.jpg"),
       linkedin: 'https://www.linkedin.com/in/amnamaslam/',
+    },
+    {
+      id: "4",
+      name: "Alaa Eltahir",
+      image: require("assets/img/participants/ae.jpg"),
+      linkedin: 'https://www.linkedin.com/in/alaa-eltahir/',
+    },
+    {
+      id: "27",
+      name: "Mahley Louis",
+      image: require("assets/img/participants/ml.jpg"),
+      linkedin: 'https://www.linkedin.com/in/mahly-louis-0217b8294/',
+    },
+    {
+      id: "28",
+      name: "Chinamerem Peterson",
+      image: require("assets/img/participants/cp.jpg"),
+      linkedin: 'https://www.linkedin.com/in/chinameremp/',
+    },
+    {
+      id: "29",
+      name: "Juliet Jocelyn Addo",
+      image: require("assets/img/participants/jj.jpg"),
+      linkedin: 'https://www.linkedin.com/in/julietjaddo1/',
     },
   ];
   
