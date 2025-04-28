@@ -164,12 +164,12 @@ const items = [
       image: require("assets/img/participants/fa.jpg"),
       linkedin: 'https://www.linkedin.com/in/ahmed-fadumo',
     },
-    {
-      id: "24",
-      name: "Fadumo Hussen",
-      image: require("assets/img/participants/fh.jpg"),
-      linkedin: 'https://www.linkedin.com/in/fadumo-hussen-a51525245',
-    },
+    // {
+    //   id: "24",
+    //   name: "Fadumo Hussen",
+    //   image: require("assets/img/participants/fh.jpg"),
+    //   linkedin: 'https://www.linkedin.com/in/fadumo-hussen-a51525245',
+    // },
     {
       id: "25",
       name: "Serena Clarke",
